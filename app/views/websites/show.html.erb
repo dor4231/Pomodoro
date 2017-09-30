@@ -1,0 +1,39 @@
+<div id="sideL">
+    <div id="tasks_label">
+        <h2>NEW PAGE</h2>
+    </div>
+
+    <div class="info">
+        <div id="intro">
+            <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+        </div>
+        <div id="task_list">
+            <%= render partial: "form" %>
+        </div>
+    </div
+</div>
+
+<div id="pomodoro">
+    <div id="pom-top">
+        <h1>Work Time Remaining</h1>
+    </div>
+    <div id="pom-time"></div>
+    <div id="pom-controls">
+        <ul>
+            <li><a id="play" href="#">play</a></li>
+            <li><a id="pause" href="#">pause</a></li>
+            <li><a id="reset" href="#">reset</a></li>
+        </ul>
+    </div>
+</div>
+
+<div>
+    <p>Your tasks will show up here.</p>
+</div>
+
+
+<!-- <div id="results"></div>
+<script>
+    $.ajax(url: "/website/setup").done (html) ->
+        $("#results").append html
+</script> -->

@@ -1,0 +1,24 @@
+Pamadoro
+Description:
+
+
+
+
+Features
+
+Main - Organize your time.
+Pamadoro:
+- Add the total time you have to spend on the mission.
+- Count down sessions of selected number of minutes.
+- Count down of a short break.
+- Control panel:
+    - Pause.
+    - Play
+    - Reset
+
+Side feature - Complate any task you have.
+To Do List:
+- Add a task.
+- Complete a task.
+- Delete a task
+- Edit a task.

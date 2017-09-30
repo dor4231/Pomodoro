@@ -1,0 +1,33 @@
+<div id="sideL">
+        <div id="tasks_label">
+            <h2>TASKS</h2>
+        </div>
+    
+        <div class="info">
+            <div id="intro">
+                <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+            </div>
+            <div id="task_list">
+                <%= render partial: "form" %>
+            </div>
+        </div
+    </div>
+    
+    <div id="main">
+            <h1>Pomodoro Technique</h1>
+            <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks.</p>
+            <p><strong>When do you want to finish?</strong></p>
+        
+        
+            <%= form_tag("/website", method: "post") do %>
+                <%= text_field_tag(:hours) %>:<%= text_field_tag(:minutes) %><br/>
+                <%= submit_tag("START WORKING") %>
+            <% end %>
+        </div>
+    
+    
+    <!-- <div id="results"></div>
+    <script>
+        $.ajax(url: "/website/setup").done (html) ->
+            $("#results").append html
+    </script> -->
