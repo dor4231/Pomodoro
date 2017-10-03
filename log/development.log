@@ -215,3 +215,327 @@ Processing by WebsitesController#show as HTML
 Completed 200 OK in 158ms (Views: 124.8ms | ActiveRecord: 0.6ms)
 
 
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-10-03 13:57:03 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (2.0ms)
+  Rendered websites/setup.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 291ms (Views: 281.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-03 13:57:22 +0300
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OIpmFO3nggT5dzmA/ZmARx3OgM31I95sK9Xjx4H/S0wKKzcoKND/L44+PdNdDAHNYhJ21hyu5/7RVkww1jmp4A==", "hours"=>"12", "minutes"=>"30", "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 13:57:22 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.1ms)
+  Rendered websites/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 33ms (Views: 24.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 13:57:28 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 13:57:28 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 13:57:31 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-03 13:59:11 +0300
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.2ms)
+  Rendered websites/setup.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-03 14:01:03 +0300
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OuAJYPcvnlx87MLx1/4KDI1XS1hdy561mnnQoMmo9TqsIrdTdHETb5PrxndfpwX42farTZ7YmsjbxkfXYreLkA==", "hours"=>"", "minutes"=>"", "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:01:03 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:01:52 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:02:16 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:02:45 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:03:49 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:04:09 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:06:40 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:09:22 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:09:23 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:09:53 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:10:39 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:12:20 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 44ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:12:54 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 49ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:13:38 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:13:40 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:15:09 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 68ms (Views: 65.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:19:28 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 51ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:21:41 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:24:42 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:29:34 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:32:13 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:32:38 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.2ms)
+  Rendered websites/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:37:04 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:37:44 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:38:52 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:42:00 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:42:31 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:45:03 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:47:16 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:47:59 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:48:24 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-03 14:50:20 +0300
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
