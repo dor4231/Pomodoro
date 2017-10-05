@@ -1,7 +1,7 @@
-<script>
-    const myTimer = new Timer(<%=  %>);
-</script>
 
+<!-- <script>
+    const myTimer = new Timer(5, 6);
+</script> -->
 
 <div id="sideL">
     <div id="tasks_label">
@@ -19,15 +19,15 @@
 </div>
 
 <div id="pomodoro">
-    <div id="pom-top">
+    <div id="pom-top" class="work">
         <h1>Work Time Remaining</h1>
     </div>
-    <div id="pom-time"></div>
+    <div id="pom-time"><h1 id="display"></h1></div>
     <div id="pom-controls">
         <ul>
-            <li><a id="play" href="#" onclick="myTimer.start_timer()">Play</a></li>
-            <li><a id="pause" href="#" onclick="myTimer.pause_timer()">Pause</a></li>
-            <li><a id="reset" href="#" onclick="myTimer.reset_timer()">Reset</a></li>
+            <li><button id="play" onclick="myTimer.start_timer()">Play</button></li>
+            <li><button id="pause" onclick="myTimer.pause_timer()">Pause</button></li>
+            <li><button id="reset" onclick="myTimer.reset_timer()">Reset</button></li>
         </ul>
     </div>
 </div>
