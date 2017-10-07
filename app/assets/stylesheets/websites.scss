@@ -30,6 +30,10 @@ p {
     line-height: 1.5em;
 }
 
+h1 {
+    color: $red;
+}
+
 h1, h2, h3, h4, h5 , h6 {
     font-family: $font-header;
 }
@@ -38,23 +42,30 @@ h1, h2, h3, h4, h5 , h6 {
     width:900px; height:500px;
     margin: 50px auto 0 auto;
     border: 2px solid #ddd;
-    @include borderRadius(10px);  
+    @include borderRadius(10px);
+    overflow: hidden; 
 }
 
 #sideL {
     width: 200px; height: 100%;
     padding: 0 15px;
+    overflow: hidden;
     background-color: $darkGrey;
     color: #fff;
     display: inline-block;
     vertical-align: top;
 }
 
+.info {
+    overflow: scroll;
+    height: 100%;
+}
+
 #tasks_label {
     background-color: $red;
     width: 85px; height: 30px;
     padding: 0;
-    margin: 0 auto;
+    margin: 0 auto 15px auto;
     top: 0px;
     @include borderRadiusBottoms(5px);
 
@@ -73,7 +84,7 @@ h1, h2, h3, h4, h5 , h6 {
     margin: 0 auto;
 }
 
-#main, #pomodoro{
+#main, #pomodoro, .card{
     vertical-align: top;
     width: 666px;
     margin: 0;
@@ -86,7 +97,6 @@ h1, h2, h3, h4, h5 , h6 {
     }
 
     h1 {
-        color: $red;
         font-size: 24px;
     }
 
@@ -112,4 +122,68 @@ h1, h2, h3, h4, h5 , h6 {
 }
  
 
+/*********** Timer Styles ************/
 
+#pomodoro, .card {
+    width: 400px;
+    height: 250px;
+    background-color: #EEEEEE;
+    box-shadow: 1px 1px 7px rgba(0,0,0,.7);
+    @include borderRadius(5px);
+    position: relative;
+    top: 10px;
+    overflow: hidden;
+    
+    h1 { 
+        margin: 0;
+        color: #fff;
+    }
+}
+
+
+#pom-controls {
+    ul {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    button {
+        background-color: $darkGrey;
+        border: none;
+        @include borderRadius(5px);
+        color: #fff;
+        font-family: $font-p;
+        font-weight: bold;
+        margin: 0 10px;
+        padding: 5px 20px;
+    }
+}
+
+#pom-time {
+    margin: 25px 0 13px 0;
+    // height: 150px;
+    font-family: $font-header;
+    font-size: 6em;
+}
+
+.work {
+    background-color: $teal;
+    height: 40px;
+    padding-top: 15px;
+}
+
+.break {
+    background-color: $red;
+    height: 40px;
+    padding-top: 15px;
+}
+
+.card {
+    height: 200px;
+    margin-top: 20px; 
+}

@@ -12,7 +12,7 @@ class Timer {
         var self = this;
         var running_timer = setInterval(function() {
             self.print_junk();
-            $("#pom-time").replaceWith('<div id="pom-time">' + self.time_string() + '</div>');
+            $("#pom-time").html(self.time_string());
             if(self.seconds <= 0) {
                 clearInterval(running_timer);
                 self.make_a_sound();
@@ -39,7 +39,7 @@ class Timer {
         timeFormat[1] = Timer.numberChanger(minutes);
         timeFormat[2] = Timer.numberChanger(seconds);
 
-        return timeFormat[0] + ":" + timeFormat[1] + ":" + timeFormat[2];
+        return timeFormat[1] + ":" + timeFormat[2];
     }
 
     // Sets new secons into the timer object.
@@ -69,18 +69,16 @@ class Timer {
 
         if( $("#pom-top").hasClass("work") ) {
             $("#pom-top").replaceWith('<div id="pom-top" class="break"><h1>Break Time Remaining</h1></div>');
-            $("#play").replaceWith('<button id="play" onclick="breakTimer.start_timer()">Play</button>');
-            $("#pause").replaceWith('<button id="pause" onclick="breakTimer.start_timer()">Pause</button>');
-            $("#reset").replaceWith('<button id="reset" onclick="breakTimer.start_timer()">Reset</button>');
+            $("#play").replaceWith('<button id="play" class="break" onclick="breakTimer.start_timer()">Play</button>');
+            $("#reset").replaceWith('<button id="reset" class="break" onclick="breakTimer.reset_timer()">Reset</button>');
             
             this.seconds = this.user_seconds;
             this.clear = true;
             $("#play").trigger("click");
         } else {
             $("#pom-top").replaceWith('<div id="pom-top" class="work"><h1>Work Time Remaining</h1></div>');
-            $("#play").replaceWith('<button id="play" onclick="workTimer.start_timer()">Play</button>');
-            $("#pause").replaceWith('<button id="pause" onclick="workTimer.start_timer()">Pause</button>');
-            $("#reset").replaceWith('<button id="reset" onclick="workTimer.start_timer()">Reset</button>');
+            $("#play").replaceWith('<button id="play" class="work" onclick="workTimer.start_timer()">Play</button>');
+            $("#reset").replaceWith('<button id="reset" class="work" onclick="workTimer.reset_timer()">Reset</button>');
             
             this.seconds = this.user_seconds;
             this.clear = true;
@@ -105,6 +103,11 @@ class Timer {
             this.pause = false;
             this.clear = true;
         }
+
+        if($("#play").html() == "Play")
+            $("#play").html("Pause");
+        else 
+            $("#play").html("Play");
     }
 
     pause_timer() {
