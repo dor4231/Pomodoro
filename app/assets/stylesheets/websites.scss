@@ -1,10 +1,115 @@
 // Place all the styles related to the websites controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$font-p: "Cantarell", sans-serif;
+$font-header: "Fjalla One", sans-serif;
+$red: #b61628;
+$darkGrey: #212121;
+$teal: #5eaeab;
+
+@mixin borderRadius($value) {
+    border-radius: $value;
+    -moz-border-radius: $value;
+    -webkit-border-radius: $value;
+}
+
+@mixin borderRadiusBottoms($value) {
+    border-bottom-left-radius: $value;
+    -moz-border-bottom-left-radius: $value;
+    -webkit-border-bottom-left-radius: $value;
+    border-bottom-right-radius: $value;
+    -moz-border-bottom-right-radius: $value;
+    -webkit-border-bottom-right-radius: $value;
+}
+
+
 p {
-    font-family: "Cantarell", sans-serif;
+    font-family: $font-p;
+    font-size: 12px;
+    line-height: 1.5em;
 }
 
 h1, h2, h3, h4, h5 , h6 {
-    font-family: "Fjalla One", sans-serif
+    font-family: $font-header;
 }
+
+#container {
+    width:900px; height:500px;
+    margin: 50px auto 0 auto;
+    border: 2px solid #ddd;
+    @include borderRadius(10px);  
+}
+
+#sideL {
+    width: 200px; height: 100%;
+    padding: 0 15px;
+    background-color: $darkGrey;
+    color: #fff;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#tasks_label {
+    background-color: $red;
+    width: 85px; height: 30px;
+    padding: 0;
+    margin: 0 auto;
+    top: 0px;
+    @include borderRadiusBottoms(5px);
+
+    h2{
+        margin: 0;
+        font-size: 16px;
+        font-weight: normal; 
+        padding-top: 6px;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+}
+
+.info {
+    width: 175px;
+    margin: 0 auto;
+}
+
+#main{
+    vertical-align: top;
+    width: 666px;
+    margin: 0;
+    text-align: center;
+    display: inline-block;
+
+    section {
+        width: 500px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        color: $red;
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+        color: $darkGrey;
+    }
+
+    input[type="submit"] {
+        padding: 5px 10px; margin: 25px;
+        background-color: $teal;
+        font-family: $font-header;
+        font-size: 18px;
+        color: #fff;
+        @include borderRadius(5px);
+        border: none;
+    }
+
+    input[type="submit"]:hover {
+        padding: 10px 15px;
+    }
+
+}
+ 
+
+
