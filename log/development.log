@@ -5110,3 +5110,44 @@ Processing by WebsitesController#show as HTML
 Completed 200 OK in 46ms (Views: 22.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/website" for 127.0.0.1 at 2017-10-07 17:11:52 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.3ms)
+  Rendered websites/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 615ms (Views: 598.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-07 17:12:01 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-07 17:12:26 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 78ms (Views: 76.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-07 17:12:54 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-07 17:14:04 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.2ms)
+  Rendered websites/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
