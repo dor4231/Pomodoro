@@ -1,0 +1,22 @@
+$font-p: "Cantarell", sans-serif;
+$font-header: "Fjalla One", sans-serif;
+$darkGrey: #212121;
+
+#time_form {
+    font-size: 6em;
+    font-family: $font-header;
+    color: $darkGrey;
+ 
+}
+
+#minutes, #hours {
+    border: none;    
+    width: 115px; height: 80px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#hours {
+    text-align: right;
+}

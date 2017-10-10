@@ -153,7 +153,7 @@ h1, h2, h3, h4, h5 , h6 {
     }
 
     button {
-        background-color: $darkGrey;
+        background-color: none;
         border: none;
         @include borderRadius(5px);
         color: #fff;
@@ -186,4 +186,8 @@ h1, h2, h3, h4, h5 , h6 {
 .card {
     height: 200px;
     margin-top: 20px; 
+}
+
+.fa-play-circle {
+    color: $darkGrey;
 }

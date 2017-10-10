@@ -1,3 +1,9 @@
+<%
+time = Time.now
+hours = number_changer(time.hour)
+minutes = number_changer(time.min);
+%>
+
 <div id="container">
 
     <div id="sideL">
@@ -22,12 +28,15 @@
             <p><strong>When do you want to finish?</strong></p>
         
         
-            <%= form_tag("/website", method: "post") do %>
-                <%= text_field_tag(:hours) %>:<%= text_field_tag(:minutes) %><br/>
+            <%= form_tag("/website", method: "post", id: "time_form") do %>
+                <%= text_field(:post, :hours, id: "hours", value: hours)  %>:<%= text_field(:post, :minutes, id: "minutes", value: minutes) %><br/>
+                <p class="flash-alert"></p>
                 <%= submit_tag("START WORKING") %>
             <% end %>
         </section>
     </div>
+
+    
     
     <!-- <div id="results"></div>
     <script>
