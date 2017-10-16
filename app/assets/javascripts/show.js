@@ -1,9 +1,10 @@
 class Timer {
-    constructor(seconds, sound_path) {
+    constructor(seconds, sound_path, sessions) {
         this.user_seconds = parseInt(seconds);
         this.seconds = parseInt(seconds);
         this.clear = true;
         this.audio = new Audio(sound_path);
+        this.sessions = sessions
     }
     
 
@@ -13,7 +14,9 @@ class Timer {
         var running_timer = setInterval(function() {
             self.print_junk();
             $("#pom-time").html(self.time_string());
-            if(self.seconds <= 0) {
+            if(self.sessions <= 0){
+                times_up()
+            }else if(self.seconds <= 0) {
                 clearInterval(running_timer);
                 self.make_a_sound();
                 self.work_break_toggle();
@@ -74,6 +77,7 @@ class Timer {
             
             this.seconds = this.user_seconds;
             this.clear = true;
+            this.sessions -= 1
             $("#play").trigger("click");
         } else {
             $("#pom-top").replaceWith('<div id="pom-top" class="work"><h1>Work Time Remaining</h1></div>');
@@ -82,8 +86,15 @@ class Timer {
             
             this.seconds = this.user_seconds;
             this.clear = true;
+            this.sessions -= 1
             $("#play").trigger("click");
         };
+    }
+
+    times_up() {
+        $('#container').addClass('allDone')
+        $('#currentlyWorking').addClass("hide").removeClass("show");
+        $('#goAway').addClass("show").removeClass("hide");
     }
 
     // After the timer runs up this is the sign that it ended.

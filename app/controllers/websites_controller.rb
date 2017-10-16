@@ -4,16 +4,20 @@ class WebsitesController < ApplicationController
     end
 
     def show
-        @website = Website.new
+        @website = Website.find(params[:format])
     end
 
     def create
-        variables = params[:post]
+        @website = Website.new
+        @variables = params[:post]
+        @website.hours = 60
+        @minutes = @variables["minutes"]
+        # website.minutes = variables["minutes"]
+        @website.save
         
-        website = Website.find(1)
-        website.minutes = variables["minutes"]
         
-        redirect_to "/website"
+        redirect_to website_path(@website)
+        # redirect_to website_path(:website => 3)
     end
 
     def setup

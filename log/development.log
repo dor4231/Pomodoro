@@ -8341,3 +8341,2356 @@ Processing by WebsitesController#show as HTML
 Completed 200 OK in 237ms (Views: 235.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-11 12:33:08 -0500
+  [1m[35m (29.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.4ms)
+  Rendered websites/setup.html.erb within layouts/application (450.7ms)
+Completed 200 OK in 3886ms (Views: 3768.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 12:39:57 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O5Hyl/yPfDz2EPLAW3tIsdm6bCkA3t/nqYkbVugmSyHWKYqfom7+N90NvKWJZLDVEQBN9ESQ+esDECgoyvGAcA==", "post"=>{"hours"=>"12", "minutes"=>"33"}, "commit"=>"START WORKING"}
+  [1m[36mWebsite Load (0.4ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/website
+Completed 302 Found in 235ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 12:39:57 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 503ms (Views: 447.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 12:40:45 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O5Hyl/yPfDz2EPLAW3tIsdm6bCkA3t/nqYkbVugmSyHWKYqfom7+N90NvKWJZLDVEQBN9ESQ+esDECgoyvGAcA==", "post"=>{"hours"=>"12", "minutes"=>"33"}, "commit"=>"START WORKING"}
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Website with 'id'=first):
+  
+app/controllers/websites_controller.rb:13:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-11 12:41:15 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O5Hyl/yPfDz2EPLAW3tIsdm6bCkA3t/nqYkbVugmSyHWKYqfom7+N90NvKWJZLDVEQBN9ESQ+esDECgoyvGAcA==", "post"=>{"hours"=>"12", "minutes"=>"33"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 12:41:15 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.4ms)
+  Rendered websites/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 428ms (Views: 373.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 12:42:04 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O5Hyl/yPfDz2EPLAW3tIsdm6bCkA3t/nqYkbVugmSyHWKYqfom7+N90NvKWJZLDVEQBN9ESQ+esDECgoyvGAcA==", "post"=>{"hours"=>"12", "minutes"=>"33"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 12:42:04 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.3ms)
+  Rendered websites/show.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 1118ms (Views: 980.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 12:44:33 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O5Hyl/yPfDz2EPLAW3tIsdm6bCkA3t/nqYkbVugmSyHWKYqfom7+N90NvKWJZLDVEQBN9ESQ+esDECgoyvGAcA==", "post"=>{"hours"=>"12", "minutes"=>"33"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 99ms
+
+
+  
+NameError (undefined local variable or method `variables' for #<WebsitesController:0x007fd2daec8290>
+Did you mean?  @variables):
+  
+app/controllers/websites_controller.rb:12:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-11 12:44:54 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O5Hyl/yPfDz2EPLAW3tIsdm6bCkA3t/nqYkbVugmSyHWKYqfom7+N90NvKWJZLDVEQBN9ESQ+esDECgoyvGAcA==", "post"=>{"hours"=>"12", "minutes"=>"33"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 12:44:54 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 345ms (Views: 335.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-11 12:45:34 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.2ms)
+  Rendered websites/setup.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 36ms (Views: 23.6ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 12:45:35 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 12:45:35 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.1ms)
+  Rendered websites/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 38ms (Views: 28.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 12:46:21 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+TypeError (no implicit conversion of Fixnum into String):
+  
+app/controllers/websites_controller.rb:14:in `+'
+app/controllers/websites_controller.rb:14:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-11 12:46:36 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 12:46:36 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.3ms)
+  Rendered websites/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 32ms (Views: 22.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 12:47:26 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 12:47:26 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 12:47:36 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 12:47:36 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 12:47:45 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 12:47:45 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 12:59:20 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 13:00:53 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 13:00:53 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (149.9ms)
+Completed 500 Internal Server Error in 155ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `minutes' for #<#<Class:0x007fd2d3e241b0>:0x007fd2daba9b68>):
+    1: 
+    2: <script>
+    3:     const workTimer = new Timer(<%= minutes %>, "/Audience_Applause-Matthiew11-1206899159.wav");
+    4:     const breakTimer = new Timer(<%=  %>100, "/Audience_Applause-Matthiew11-1206899159.wav");
+    5: </script>
+    6: 
+  
+app/views/websites/show.html.erb:3:in `_app_views_websites_show_html_erb__215127061860066623_70271794762640'
+Started POST "/website" for 127.0.0.1 at 2017-10-11 13:01:06 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 13:01:06 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 13:01:19 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 13:01:19 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 13:11:19 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 13:11:19 -0500
+Processing by WebsitesController#show as HTML
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/websites_controller.rb:9:in `show'
+Started POST "/website" for 127.0.0.1 at 2017-10-11 13:11:38 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 13:11:38 -0500
+Processing by WebsitesController#show as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/websites_controller.rb:10:in `show'
+Started POST "/website" for 127.0.0.1 at 2017-10-11 13:16:52 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 13:16:52 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 31ms (Views: 20.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 13:18:11 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 13:18:11 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 13:27:40 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 13:27:40 -0500
+Processing by WebsitesController#show as HTML
+Completed 500 Internal Server Error in 1ms
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/websites_controller.rb:9:in `show'
+Started POST "/website" for 127.0.0.1 at 2017-10-11 13:28:26 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 13:28:26 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 36ms (Views: 19.6ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 13:28:34 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 13:28:34 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 26ms (Views: 24.5ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 13:36:53 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 3ms
+
+
+  
+NoMethodError (undefined method `delete' for 45:Fixnum):
+  
+app/controllers/websites_controller.rb:21:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-11 13:42:10 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 84ms
+
+
+  
+NameError (undefined local variable or method `minutes' for #<WebsitesController:0x007fd2d27b9510>):
+  
+app/controllers/websites_controller.rb:11:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-11 13:44:25 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/SDsj7KXG0zy/F0n/LU1kzQev7OonrQ4h2d5nYXb7hcQmJSH7HaZR9nhE0Iuqs33/KSebuzQkjQt/krjpwwlRg==", "post"=>{"hours"=>"12", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 102ms
+
+
+  
+NameError (undefined local variable or method `minutes' for #<WebsitesController:0x007fd2d4292350>
+Did you mean?  @minutes):
+  
+app/controllers/websites_controller.rb:18:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-11 13:44:37 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/setup.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 23ms (Views: 20.9ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 13:44:39 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zF1+3wggeAqxCtftK7XuV/sHeOZIWf3VuDPKlsH+FXIh5QbXVsH6AZoXmYj5qhYzM71ZOwwX29kSqvno4yneIw==", "post"=>{"hours"=>"13", "minutes"=>"44"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.8ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/websites_controller.rb:18:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-11 13:45:01 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/setup.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 25ms (Views: 22.4ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 13:45:02 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jxdJEkJXdWWrnS6r3O8J5791SIv6d8qIcwf8gm0nfeRirzEaHLb3boCAYM4O8PGDd89pVr457ITZns/8T/C2tQ==", "post"=>{"hours"=>"13", "minutes"=>"45"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.7ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/websites_controller.rb:18:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-11 13:51:01 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/setup.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    27:             <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks.</p>
+    28:             <p><strong>When do you want to finish?</strong></p>
+    29:         
+    30:             <%= form_for @website do |f| %>
+    31:                 <%= text_field(:post, :hours, id: "hours", value: hours)  %>:<%= text_field(:post, :minutes, id: "minutes", value: minutes) %><br/>
+    32:                 <%= form.submit 'Start Working', class: 'button' %>
+    33:             <% end %>    
+  
+app/views/websites/setup.html.erb:30:in `_app_views_websites_setup_html_erb___24982121082380508_70271795190700'
+Started GET "/" for 127.0.0.1 at 2017-10-11 13:51:46 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/setup.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 13:51:47 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oQEZ8kY9ziGlrHZSH6r15L92li/osR34RwNHHNwaEdRMuWH6GNxMKo6xODfNtQ2Ad8y38qz/O/TtmnRi/s3ahQ==", "post"=>{"hours"=>"13", "minutes"=>"51"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/websites_controller.rb:18:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-11 14:00:13 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oQEZ8kY9ziGlrHZSH6r15L92li/osR34RwNHHNwaEdRMuWH6GNxMKo6xODfNtQ2Ad8y38qz/O/TtmnRi/s3ahQ==", "post"=>{"hours"=>"13", "minutes"=>"51"}, "commit"=>"START WORKING"}
+Redirected to 
+Completed 500 Internal Server Error in 1ms
+
+
+  
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  
+app/controllers/websites_controller.rb:24:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-11 14:00:27 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oQEZ8kY9ziGlrHZSH6r15L92li/osR34RwNHHNwaEdRMuWH6GNxMKo6xODfNtQ2Ad8y38qz/O/TtmnRi/s3ahQ==", "post"=>{"hours"=>"13", "minutes"=>"51"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 14:00:27 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 30ms (Views: 19.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-11 14:01:55 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/setup.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 23ms (Views: 20.9ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-11 14:01:56 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6fACeT3PD7+eILvm67+El+WdNqeTGaWvYZIWdc72PtAESHpxYy6NtLU99YM5oHzzLScXetdXg6PLCyUL7CH1gQ==", "post"=>{"hours"=>"14", "minutes"=>"01"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-11 14:01:56 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (uninitialized class variable @@new_minutes in ActionView::CompiledTemplates):
+    1: 
+    2: <script>
+    3:     const workTimer = new Timer(<%= @@new_minutes %>, "/Audience_Applause-Matthiew11-1206899159.wav");
+    4:     const breakTimer = new Timer(<%=  %>100, "/Audience_Applause-Matthiew11-1206899159.wav");
+    5: </script>
+    6: 
+  
+app/views/websites/show.html.erb:3:in `_app_views_websites_show_html_erb__215127061860066623_70271722896920'
+Started GET "/" for 127.0.0.1 at 2017-10-12 19:08:44 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (11.3ms)
+  Rendered websites/setup.html.erb within layouts/application (78.1ms)
+Completed 200 OK in 1428ms (Views: 1357.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:09:05 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BUfPDr0JlMvywurf07F0IDsF9rbYIUEj3conkktYNR7o/7cG4+gWwNnfpLoBroxE87/Xa5xvZy93UxTsaY/+Tw==", "post"=>{"hours"=>"19", "minutes"=>"08"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:09:06 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 327ms (Views: 251.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:09:22 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BUfPDr0JlMvywurf07F0IDsF9rbYIUEj3conkktYNR7o/7cG4+gWwNnfpLoBroxE87/Xa5xvZy93UxTsaY/+Tw==", "post"=>{"hours"=>"19", "minutes"=>"08"}, "commit"=>"START WORKING"}
+Started GET "/" for 127.0.0.1 at 2017-10-12 19:09:32 -0500
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/setup.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 251ms (Views: 228.3ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:09:34 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hh6RuG1n9ghqzmiE/p0r4NbYS6X+Dfb5A7+UkWoaeJtrpumwM4Z0A0HTJuEsgtOEHmJqeLpD0PWpJqfvSM2zyg==", "post"=>{"hours"=>"19", "minutes"=>"09"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:09:34 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 94ms (Views: 22.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-12 19:10:01 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.5ms)
+  Rendered websites/setup.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 36ms (Views: 34.5ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:10:02 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FGHiBbFRu+MN8I21SPGBxnXKMY13n5im2UDLuTWsDP752ZoN77A56Cbtw9Ca7nmivXAQUDPRvqpz2fjHF3vHrw==", "post"=>{"hours"=>"19", "minutes"=>"10"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:10:02 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 42ms (Views: 29.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-12 19:13:53 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/setup.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 340ms (Views: 328.2ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:13:55 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jdK6FXF0qpvPQdCcLA2FZ/jROyenZ5La/J8VklK7b1JgasIdL5UokORcnvn+En0DMGsa+uMptNZWBibscGykAw==", "post"=>{"hours"=>"19", "minutes"=>"13"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:13:55 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 69ms (Views: 26.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:14:15 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 684ms (Views: 681.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:15:57 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 266ms (Views: 229.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:16:01 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jdK6FXF0qpvPQdCcLA2FZ/jROyenZ5La/J8VklK7b1JgasIdL5UokORcnvn+En0DMGsa+uMptNZWBibscGykAw==", "post"=>{"hours"=>"19", "minutes"=>"13"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:16:01 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:21:15 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jdK6FXF0qpvPQdCcLA2FZ/jROyenZ5La/J8VklK7b1JgasIdL5UokORcnvn+En0DMGsa+uMptNZWBibscGykAw==", "post"=>{"hours"=>"19", "minutes"=>"13"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 56ms
+
+
+  
+NoMethodError (undefined method `link_to' for #<WebsitesController:0x007fb1d6bf8f80>):
+  
+app/controllers/websites_controller.rb:11:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:24:40 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jdK6FXF0qpvPQdCcLA2FZ/jROyenZ5La/J8VklK7b1JgasIdL5UokORcnvn+En0DMGsa+uMptNZWBibscGykAw==", "post"=>{"hours"=>"19", "minutes"=>"13"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:24:40 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    13:         <div class="info">
+    14:             <div id="intro">
+    15:                     <%= $user_minutes %>
+    16:                     <%= render @user_minutes %>
+    17:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    18:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    19:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+  
+app/views/websites/show.html.erb:16:in `_app_views_websites_show_html_erb__910240577083622885_70200903166340'
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:25:00 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 31ms (Views: 21.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:25:04 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jdK6FXF0qpvPQdCcLA2FZ/jROyenZ5La/J8VklK7b1JgasIdL5UokORcnvn+En0DMGsa+uMptNZWBibscGykAw==", "post"=>{"hours"=>"19", "minutes"=>"13"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:25:04 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:25:29 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 65ms (Views: 20.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:25:33 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jdK6FXF0qpvPQdCcLA2FZ/jROyenZ5La/J8VklK7b1JgasIdL5UokORcnvn+En0DMGsa+uMptNZWBibscGykAw==", "post"=>{"hours"=>"19", "minutes"=>"13"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:25:33 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.5ms)
+  Rendered websites/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:26:03 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jdK6FXF0qpvPQdCcLA2FZ/jROyenZ5La/J8VklK7b1JgasIdL5UokORcnvn+En0DMGsa+uMptNZWBibscGykAw==", "post"=>{"hours"=>"19", "minutes"=>"13"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:26:03 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 30ms (Views: 20.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:26:13 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jdK6FXF0qpvPQdCcLA2FZ/jROyenZ5La/J8VklK7b1JgasIdL5UokORcnvn+En0DMGsa+uMptNZWBibscGykAw==", "post"=>{"hours"=>"19", "minutes"=>"13"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:26:13 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:26:28 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jdK6FXF0qpvPQdCcLA2FZ/jROyenZ5La/J8VklK7b1JgasIdL5UokORcnvn+En0DMGsa+uMptNZWBibscGykAw==", "post"=>{"hours"=>"19", "minutes"=>"13"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:26:28 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 30ms (Views: 20.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-12 19:26:50 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/setup.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 289ms (Views: 253.4ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:26:52 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qegqkjN9v6Pcn54IZnhTV4omPYqmp0t4C2uRAtPQDypEUFKabZw9qPeC0G20Z6szQpwcV+LpbXSh8qJ88QfEew==", "post"=>{"hours"=>"19", "minutes"=>"26"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:26:52 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 47ms (Views: 23.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:27:00 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:27:07 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qegqkjN9v6Pcn54IZnhTV4omPYqmp0t4C2uRAtPQDypEUFKabZw9qPeC0G20Z6szQpwcV+LpbXSh8qJ88QfEew==", "post"=>{"hours"=>"19", "minutes"=>"26"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:27:07 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:27:14 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-12 19:27:18 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/setup.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:27:19 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kD/dFn59hMWIxacs69zAuqUI4LBRsZsTFe0gbvw3Mo99h6UeIJwGzqPY6Uk5wzjebbLBbRX/vR+/dBMQ3uD53g==", "post"=>{"hours"=>"19", "minutes"=>"27"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:27:19 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:28:19 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kD/dFn59hMWIxacs69zAuqUI4LBRsZsTFe0gbvw3Mo99h6UeIJwGzqPY6Uk5wzjebbLBbRX/vR+/dBMQ3uD53g==", "post"=>{"hours"=>"19", "minutes"=>"27"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+NoMethodError (undefined method `save' for nil:NilClass):
+  
+app/controllers/websites_controller.rb:17:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-12 19:28:39 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/setup.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 25ms (Views: 23.1ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:28:40 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H0PYqoxEFHW3s4IAVYLH4JAoI2yBOL/X78YOCfw4advy+6Ci0qWWfpyuzGWHnT+EWJICscV2mdtFXz133u+iig==", "post"=>{"hours"=>"19", "minutes"=>"28"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 3ms
+
+
+  
+NoMethodError (undefined method `save' for 28:Fixnum):
+  
+app/controllers/websites_controller.rb:17:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:31:12 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H0PYqoxEFHW3s4IAVYLH4JAoI2yBOL/X78YOCfw4advy+6Ci0qWWfpyuzGWHnT+EWJICscV2mdtFXz133u+iig==", "post"=>{"hours"=>"19", "minutes"=>"28"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `save' for 28:Fixnum):
+  
+app/controllers/websites_controller.rb:17:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:31:22 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H0PYqoxEFHW3s4IAVYLH4JAoI2yBOL/X78YOCfw4advy+6Ci0qWWfpyuzGWHnT+EWJICscV2mdtFXz133u+iig==", "post"=>{"hours"=>"19", "minutes"=>"28"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 3ms
+
+
+  
+ActionView::MissingTemplate (Missing template /website with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/MrandMrsFore/odin/Pomodoro/app/views"
+):
+  
+app/controllers/websites_controller.rb:25:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:33:48 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H0PYqoxEFHW3s4IAVYLH4JAoI2yBOL/X78YOCfw4advy+6Ci0qWWfpyuzGWHnT+EWJICscV2mdtFXz133u+iig==", "post"=>{"hours"=>"19", "minutes"=>"28"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NameError (uninitialized constant WebsitesController::Timer):
+  
+app/controllers/websites_controller.rb:16:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:34:41 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H0PYqoxEFHW3s4IAVYLH4JAoI2yBOL/X78YOCfw4advy+6Ci0qWWfpyuzGWHnT+EWJICscV2mdtFXz133u+iig==", "post"=>{"hours"=>"19", "minutes"=>"28"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NameError (uninitialized constant WebsitesController::Timer):
+  
+app/controllers/websites_controller.rb:16:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:35:10 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H0PYqoxEFHW3s4IAVYLH4JAoI2yBOL/X78YOCfw4advy+6Ci0qWWfpyuzGWHnT+EWJICscV2mdtFXz133u+iig==", "post"=>{"hours"=>"19", "minutes"=>"28"}, "commit"=>"START WORKING"}
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 203ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Website with 'id'=first):
+  
+app/controllers/websites_controller.rb:18:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-12 19:38:49 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/setup.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 51ms (Views: 49.5ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:38:50 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/EU96xJx5TnIxRnp7DIia/HNOyh3XTpxXa9MDgMUidMR/UXjTJBnMuPYV4w+LdoPOXca9TMTHH33Nn9wIcNCgg==", "post"=>{"hours"=>"19", "minutes"=>"38"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 19:38:50 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 36ms (Views: 26.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-12 19:44:17 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/setup.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    27:             <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The technique uses a timer to break down work into intervals, traditionally 25 minutes in length, separated by short breaks.</p>
+    28:             <p><strong>When do you want to finish?</strong></p>
+    29: 
+    30:             <%= form_for(@website) do |f| %>
+    31:                 <%= f.text_field :hours %>: <%= f.text_field :minutes %>
+    32:                 <%= f.submit %>
+    33:             <% end %>
+  
+app/views/websites/setup.html.erb:30:in `_app_views_websites_setup_html_erb__3179374619056687102_70200968026220'
+Started GET "/" for 127.0.0.1 at 2017-10-12 19:50:37 -0500
+  
+SyntaxError (/Users/MrandMrsFore/odin/Pomodoro/app/controllers/websites_controller.rb:21: syntax error, unexpected '(', expecting keyword_end
+        redirect_to "/website"( :minutes => @minutes)
+                               ^
+/Users/MrandMrsFore/odin/Pomodoro/app/controllers/websites_controller.rb:37: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/websites_controller.rb:21: syntax error, unexpected '(', expecting keyword_end
+app/controllers/websites_controller.rb:37: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2017-10-12 19:55:19 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.2ms)
+  Rendered websites/setup.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 705ms (Views: 697.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 19:55:23 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YppSlAUYVtWzTnGXHIomSXgdg5cWH7mhcdRuJE+OztWPIiqcW/nU3phTP/LOld4tsKeiSlJRn63bTV1abVkFhA==", "post"=>{"hours"=>"19", "minutes"=>"55"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website?minutes=55
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website?minutes=55" for 127.0.0.1 at 2017-10-12 19:55:23 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"55"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 28ms (Views: 18.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:00:44 -0500
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:00:54 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YppSlAUYVtWzTnGXHIomSXgdg5cWH7mhcdRuJE+OztWPIiqcW/nU3phTP/LOld4tsKeiSlJRn63bTV1abVkFhA==", "post"=>{"hours"=>"19", "minutes"=>"55"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YppSlAUYVtWzTnGXHIomSXgdg5cWH7mhcdRuJE+OztWPIiqcW/nU3phTP/LOld4tsKeiSlJRn63bTV1abVkFhA==", "post"=>{"hours"=>"19", "minutes"=>"55"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 20:00:54 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 35ms (Views: 24.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 20:01:22 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:01:56 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YppSlAUYVtWzTnGXHIomSXgdg5cWH7mhcdRuJE+OztWPIiqcW/nU3phTP/LOld4tsKeiSlJRn63bTV1abVkFhA==", "post"=>{"hours"=>"19", "minutes"=>"55"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website?minutes=55
+Completed 302 Found in 1ms
+
+
+Started GET "/website?minutes=55" for 127.0.0.1 at 2017-10-12 20:01:56 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"55"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.2ms)
+  Rendered websites/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 42ms (Views: 29.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/website?minutes=55" for 127.0.0.1 at 2017-10-12 20:02:00 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"55"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website?minutes=55" for 127.0.0.1 at 2017-10-12 20:02:12 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"55"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:15: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+...eze;@output_buffer.append=( :54 );@output_buffer.safe_append...
+...                               ^):
+  
+app/views/websites/show.html.erb:15: syntax error, unexpected tINTEGER, expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+Started GET "/" for 127.0.0.1 at 2017-10-12 20:02:21 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/setup.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:02:26 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o0Jz4y7hOZOPpqfd83NtQxSWGCcmw6g/v9iUyn25jFJO+gvrcAC7mKS76bghbJUn3Cw5+mKNjjMVQae0X25HAw==", "post"=>{"hours"=>"20", "minutes"=>"02"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website?minutes=02
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website?minutes=02" for 127.0.0.1 at 2017-10-12 20:02:26 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"02"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website?minutes=02" for 127.0.0.1 at 2017-10-12 20:03:18 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"02"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (137.1ms)
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `high' for #<#<Class:0x007fe1f819dea8>:0x007fe1f56ff368>):
+    12: 
+    13:         <div class="info">
+    14:             <div id="intro">
+    15:                 <%= high %>
+    16:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    17:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    18:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+  
+app/views/websites/show.html.erb:15:in `_app_views_websites_show_html_erb__1041253502068223975_70304231072940'
+Started GET "/" for 127.0.0.1 at 2017-10-12 20:03:24 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/setup.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:03:30 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O7h21ssITeaIOFrwj1Sya2qB92p7T6V5XnCeqMOAgCrWAA7elenP7aMlFJVdS0oPojvWtz8Bg3X06a3W4VdLew==", "post"=>{"hours"=>"20", "minutes"=>"03"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website?minutes=03
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website?minutes=03" for 127.0.0.1 at 2017-10-12 20:03:30 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"03"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website?minutes=03" for 127.0.0.1 at 2017-10-12 20:03:39 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"03"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.5ms)
+  Rendered websites/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website?minutes=03" for 127.0.0.1 at 2017-10-12 20:03:56 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"03"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 29ms (Views: 19.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:03:59 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O7h21ssITeaIOFrwj1Sya2qB92p7T6V5XnCeqMOAgCrWAA7elenP7aMlFJVdS0oPojvWtz8Bg3X06a3W4VdLew==", "post"=>{"hours"=>"20", "minutes"=>"03"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website.03
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website.03" for 127.0.0.1 at 2017-10-12 20:03:59 -0500
+Processing by WebsitesController#show as 
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 51ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:08:59 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O7h21ssITeaIOFrwj1Sya2qB92p7T6V5XnCeqMOAgCrWAA7elenP7aMlFJVdS0oPojvWtz8Bg3X06a3W4VdLew==", "post"=>{"hours"=>"20", "minutes"=>"03"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website?03=03
+Completed 302 Found in 1ms
+
+
+Started GET "/website?03=03" for 127.0.0.1 at 2017-10-12 20:09:00 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"03"=>"03"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 28ms (Views: 19.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:09:45 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O7h21ssITeaIOFrwj1Sya2qB92p7T6V5XnCeqMOAgCrWAA7elenP7aMlFJVdS0oPojvWtz8Bg3X06a3W4VdLew==", "post"=>{"hours"=>"20", "minutes"=>"03"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website?post=03
+Completed 302 Found in 1ms
+
+
+Started GET "/website?post=03" for 127.0.0.1 at 2017-10-12 20:09:45 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"post"=>"03"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 30ms (Views: 20.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:10:47 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O7h21ssITeaIOFrwj1Sya2qB92p7T6V5XnCeqMOAgCrWAA7elenP7aMlFJVdS0oPojvWtz8Bg3X06a3W4VdLew==", "post"=>{"hours"=>"20", "minutes"=>"03"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `minutes' for nil:NilClass):
+  
+app/controllers/websites_controller.rb:21:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:11:17 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O7h21ssITeaIOFrwj1Sya2qB92p7T6V5XnCeqMOAgCrWAA7elenP7aMlFJVdS0oPojvWtz8Bg3X06a3W4VdLew==", "post"=>{"hours"=>"20", "minutes"=>"03"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website?post=03
+Completed 302 Found in 1ms
+
+
+Started GET "/website?post=03" for 127.0.0.1 at 2017-10-12 20:11:17 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"post"=>"03"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 28ms (Views: 19.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:18:14 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O7h21ssITeaIOFrwj1Sya2qB92p7T6V5XnCeqMOAgCrWAA7elenP7aMlFJVdS0oPojvWtz8Bg3X06a3W4VdLew==", "post"=>{"hours"=>"20", "minutes"=>"03"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website?minutes=03
+Completed 302 Found in 1ms
+
+
+Started GET "/website?minutes=03" for 127.0.0.1 at 2017-10-12 20:18:15 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"03"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 1242ms (Views: 967.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:18:51 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O7h21ssITeaIOFrwj1Sya2qB92p7T6V5XnCeqMOAgCrWAA7elenP7aMlFJVdS0oPojvWtz8Bg3X06a3W4VdLew==", "post"=>{"hours"=>"20", "minutes"=>"03"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website?03=03
+Completed 302 Found in 1ms
+
+
+Started GET "/website?03=03" for 127.0.0.1 at 2017-10-12 20:18:51 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"03"=>"03"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 323ms (Views: 293.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:19:45 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O7h21ssITeaIOFrwj1Sya2qB92p7T6V5XnCeqMOAgCrWAA7elenP7aMlFJVdS0oPojvWtz8Bg3X06a3W4VdLew==", "post"=>{"hours"=>"20", "minutes"=>"03"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `encoding' for nil:NilClass):
+  
+app/controllers/websites_controller.rb:21:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-12 20:20:32 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/setup.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 96ms (Views: 77.7ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:20:34 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IvU4tUS3pG0goALeM1gqnK3WDn8a8aXQ+oJ2zGmXJv/PTUC9GlYmZgu9TLvhR9L4ZWwvol6/g9xQG0WyS0Dtrg==", "post"=>{"hours"=>"20", "minutes"=>"20"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-12 20:20:34 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 32ms (Views: 20.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:22:42 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IvU4tUS3pG0goALeM1gqnK3WDn8a8aXQ+oJ2zGmXJv/PTUC9GlYmZgu9TLvhR9L4ZWwvol6/g9xQG0WyS0Dtrg==", "post"=>{"hours"=>"20", "minutes"=>"20"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website.20
+Completed 302 Found in 1ms
+
+
+Started GET "/website.20" for 127.0.0.1 at 2017-10-12 20:22:42 -0500
+Processing by WebsitesController#show as 
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 62ms (Views: 43.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:23:03 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IvU4tUS3pG0goALeM1gqnK3WDn8a8aXQ+oJ2zGmXJv/PTUC9GlYmZgu9TLvhR9L4ZWwvol6/g9xQG0WyS0Dtrg==", "post"=>{"hours"=>"20", "minutes"=>"20"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+NoMethodError (undefined method `encoding' for nil:NilClass):
+  
+app/controllers/websites_controller.rb:21:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:25:02 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IvU4tUS3pG0goALeM1gqnK3WDn8a8aXQ+oJ2zGmXJv/PTUC9GlYmZgu9TLvhR9L4ZWwvol6/g9xQG0WyS0Dtrg==", "post"=>{"hours"=>"20", "minutes"=>"20"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website?minutes=20
+Completed 302 Found in 1ms
+
+
+Started GET "/website?minutes=20" for 127.0.0.1 at 2017-10-12 20:25:02 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"20"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 30ms (Views: 19.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:25:37 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IvU4tUS3pG0goALeM1gqnK3WDn8a8aXQ+oJ2zGmXJv/PTUC9GlYmZgu9TLvhR9L4ZWwvol6/g9xQG0WyS0Dtrg==", "post"=>{"hours"=>"20", "minutes"=>"20"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website?minutes=3
+Completed 302 Found in 1ms
+
+
+Started GET "/website?minutes=3" for 127.0.0.1 at 2017-10-12 20:25:37 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 35ms (Views: 25.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/website?minutes=3" for 127.0.0.1 at 2017-10-12 20:25:53 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website?minutes=3" for 127.0.0.1 at 2017-10-12 20:26:03 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized class variable @@minutes in ActionView::CompiledTemplates):
+    12: 
+    13:         <div class="info">
+    14:             <div id="intro">
+    15:                 <%= @@minutes %>
+    16:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    17:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    18:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+  
+app/views/websites/show.html.erb:15:in `_app_views_websites_show_html_erb__1041253502068223975_70304295691200'
+Started GET "/website?minutes=3" for 127.0.0.1 at 2017-10-12 20:26:10 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website?minutes=3" for 127.0.0.1 at 2017-10-12 20:26:16 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website?minutes=3" for 127.0.0.1 at 2017-10-12 20:26:32 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website?minutes=3" for 127.0.0.1 at 2017-10-12 20:26:39 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `value' for :minutes:Symbol):
+    12: 
+    13:         <div class="info">
+    14:             <div id="intro">
+    15:                 <%= :minutes.value %>
+    16:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    17:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    18:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+  
+app/views/websites/show.html.erb:15:in `_app_views_websites_show_html_erb__1041253502068223975_70304294621300'
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:30:37 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IvU4tUS3pG0goALeM1gqnK3WDn8a8aXQ+oJ2zGmXJv/PTUC9GlYmZgu9TLvhR9L4ZWwvol6/g9xQG0WyS0Dtrg==", "post"=>{"hours"=>"20", "minutes"=>"20"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website?minutes=3
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website?minutes=3" for 127.0.0.1 at 2017-10-12 20:30:37 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:32:08 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IvU4tUS3pG0goALeM1gqnK3WDn8a8aXQ+oJ2zGmXJv/PTUC9GlYmZgu9TLvhR9L4ZWwvol6/g9xQG0WyS0Dtrg==", "post"=>{"hours"=>"20", "minutes"=>"20"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website.20
+Completed 302 Found in 1ms
+
+
+Started GET "/website.20" for 127.0.0.1 at 2017-10-12 20:32:08 -0500
+Processing by WebsitesController#show as 
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 83ms (Views: 36.0ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/website.20" for 127.0.0.1 at 2017-10-12 20:32:24 -0500
+Processing by WebsitesController#show as 
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 48ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website.20" for 127.0.0.1 at 2017-10-12 20:32:35 -0500
+Processing by WebsitesController#show as 
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.3ms)
+  Rendered websites/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 55ms (Views: 37.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/website.20" for 127.0.0.1 at 2017-10-12 20:32:37 -0500
+Processing by WebsitesController#show as 
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 47ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 20:32:40 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IvU4tUS3pG0goALeM1gqnK3WDn8a8aXQ+oJ2zGmXJv/PTUC9GlYmZgu9TLvhR9L4ZWwvol6/g9xQG0WyS0Dtrg==", "post"=>{"hours"=>"20", "minutes"=>"20"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website?minutes=3
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website?minutes=3" for 127.0.0.1 at 2017-10-12 20:32:40 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-12 23:16:46 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/setup.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 78ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-12 23:16:48 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VgHg4xOK/bAdOxEx9dAvGjII0fpQoUmBfsXXI7AviyK7uZjrTWt/uzYmX1Qnz9d++rLwJxTvb43UXORdkvhAcw==", "post"=>{"hours"=>"23", "minutes"=>"16"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website?minutes=3
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website?minutes=3" for 127.0.0.1 at 2017-10-12 23:16:48 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (139.1ms)
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `website' for #<#<Class:0x007fe1f838d9c0>:0x007fe1f43f85d0>
+Did you mean?  @website):
+    12: 
+    13:         <div class="info">
+    14:             <div id="intro">
+    15:                 <%= website.object.minutes %>
+    16:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    17:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    18:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+  
+app/views/websites/show.html.erb:15:in `_app_views_websites_show_html_erb__1041253502068223975_70304221090380'
+Started GET "/website?minutes=3" for 127.0.0.1 at 2017-10-12 23:17:01 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (156.9ms)
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `website_object_minutes' for #<#<Class:0x007fe1f838d9c0>:0x007fe1f5310bd0>):
+    12: 
+    13:         <div class="info">
+    14:             <div id="intro">
+    15:                 <%= website_object_minutes %>
+    16:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    17:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    18:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+  
+app/views/websites/show.html.erb:15:in `_app_views_websites_show_html_erb__1041253502068223975_70304229004900'
+Started GET "/website?minutes=3" for 127.0.0.1 at 2017-10-12 23:17:11 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (141.7ms)
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `minutes' for #<#<Class:0x007fe1f838d9c0>:0x007fe1fd20f9e0>):
+    12: 
+    13:         <div class="info">
+    14:             <div id="intro">
+    15:                 <%= minutes %>
+    16:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    17:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    18:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+  
+app/views/websites/show.html.erb:15:in `_app_views_websites_show_html_erb__1041253502068223975_70304295971000'
+Started GET "/website?minutes=3" for 127.0.0.1 at 2017-10-12 23:17:23 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (131.6ms)
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `website' for #<#<Class:0x007fe1f838d9c0>:0x007fe1f669cbb8>
+Did you mean?  @website):
+    12: 
+    13:         <div class="info">
+    14:             <div id="intro">
+    15:                 <%= website.class %>
+    16:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    17:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    18:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+  
+app/views/websites/show.html.erb:15:in `_app_views_websites_show_html_erb__1041253502068223975_70304239250120'
+Started GET "/website?minutes=3" for 127.0.0.1 at 2017-10-12 23:17:29 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website?minutes=3" for 127.0.0.1 at 2017-10-12 23:17:38 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `minutes' for #<Class:0x007fe1f57df580>):
+    12: 
+    13:         <div class="info">
+    14:             <div id="intro">
+    15:                 <%= Website.minutes %>
+    16:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    17:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+    18:                 <p>Click the + to enter new tasks. Before you start, be sure to click on the tasks you will be working on this session.</p>
+  
+app/views/websites/show.html.erb:15:in `_app_views_websites_show_html_erb__1041253502068223975_70304300323380'
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:08:20 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.7ms)
+  Rendered websites/setup.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 810ms (Views: 766.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-16 16:08:23 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2fMb9xK75ZtYfuyHb3wFY01oup5DKHNV5JsuV6zP1cc0S2P/TFpnkHNjouK9Y/0HhdKbQwdmVVlOAh0pjhgelg==", "post"=>{"hours"=>"16", "minutes"=>"08"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website?minutes=3
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website?minutes=3" for 127.0.0.1 at 2017-10-16 16:08:23 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"minutes"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 110ms (Views: 22.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-16 16:24:34 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2fMb9xK75ZtYfuyHb3wFY01oup5DKHNV5JsuV6zP1cc0S2P/TFpnkHNjouK9Y/0HhdKbQwdmVVlOAh0pjhgelg==", "post"=>{"hours"=>"17", "minutes"=>"08"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 34ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:24:45 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/setup.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 678ms (Views: 655.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-16 16:24:47 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k9APoaA52If/2tV0kqKPcAy6iuL1K4U8tGeanaLN7CB+aHep/thajNTHmxFAvXcUxACrP7FlozAe/qnjgBoncQ==", "post"=>{"hours"=>"16", "minutes"=>"24"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-16 16:24:47 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.1ms)
+  Rendered websites/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:26:13 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/setup.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 47ms (Views: 45.2ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-16 16:26:15 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rs60/7S8DYLISnV5VB+s2N1bDWFbyRt9pAAGLey2Jlqrdsz36l2PieNXOxyGAFS8FeEsvB+HPXEOmTVTzmHtCw==", "post"=>{"hours"=>"16", "minutes"=>"26"}, "commit"=>"START WORKING"}
+Redirected to http://localhost:3000/website?website=3
+Completed 302 Found in 57ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/website?website=3" for 127.0.0.1 at 2017-10-16 16:26:15 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"website"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 35ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website?website=3" for 127.0.0.1 at 2017-10-16 16:28:11 -0500
+Processing by WebsitesController#show as HTML
+  Parameters: {"website"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website?website=3" for 127.0.0.1 at 2017-10-16 16:30:58 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebsitesController#show as HTML
+  Parameters: {"website"=>"3"}
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.4ms)
+  Rendered websites/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 731ms (Views: 675.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-16 16:31:12 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rs60/7S8DYLISnV5VB+s2N1bDWFbyRt9pAAGLey2Jlqrdsz36l2PieNXOxyGAFS8FeEsvB+HPXEOmTVTzmHtCw==", "post"=>{"hours"=>"16", "minutes"=>"26"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "websites" ("hours", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["hours", 60], ["created_at", "2017-10-16 21:31:12.438801"], ["updated_at", "2017-10-16 21:31:12.438801"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.5
+Redirected to 
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 4.0ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/websites_controller.rb:23:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-16 16:31:29 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rs60/7S8DYLISnV5VB+s2N1bDWFbyRt9pAAGLey2Jlqrdsz36l2PieNXOxyGAFS8FeEsvB+HPXEOmTVTzmHtCw==", "post"=>{"hours"=>"16", "minutes"=>"26"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("hours", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["hours", 60], ["created_at", "2017-10-16 21:31:29.823615"], ["updated_at", "2017-10-16 21:31:29.823615"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website
+Completed 302 Found in 37ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-16 16:31:29 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.3ms)
+  Rendered websites/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 281ms (Views: 242.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:32:58 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/setup.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 275ms (Views: 263.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-16 16:33:02 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ibba0gUQ1ZurwCsXpqdE3nBdsU/Zh+eh8xG+uxx/6d7MDqLaW/FXkIDdZXJ0uLy6uOeQkp3Jwa1ZiI3FPqgijw==", "post"=>{"hours"=>"16", "minutes"=>"32"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "websites" ("hours", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["hours", 60], ["created_at", "2017-10-16 21:33:02.261346"], ["updated_at", "2017-10-16 21:33:02.261346"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-16 16:33:02 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.3ms)
+  Rendered websites/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/website" for 127.0.0.1 at 2017-10-16 16:33:49 -0500
+Processing by WebsitesController#show as HTML
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (5.7ms)
+  Rendered websites/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 63ms (Views: 31.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-16 16:34:17 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ibba0gUQ1ZurwCsXpqdE3nBdsU/Zh+eh8xG+uxx/6d7MDqLaW/FXkIDdZXJ0uLy6uOeQkp3Jwa1ZiI3FPqgijw==", "post"=>{"hours"=>"16", "minutes"=>"32"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("hours", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["hours", 60], ["created_at", "2017-10-16 21:34:17.988669"], ["updated_at", "2017-10-16 21:34:17.988669"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.8
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/website.8" for 127.0.0.1 at 2017-10-16 16:34:17 -0500
+Processing by WebsitesController#show as 
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.2ms)
+  Rendered websites/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 63ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:46:09 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.2ms)
+  Rendered websites/setup.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 747ms (Views: 723.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-16 16:46:14 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IjbrKkyypL/+R3DTAIzGvBb4WnDw/bYDZWanu8WiPeDPjpMiElMmtNVaPrbSkz7Y3kJ7rbSzkA/P/5TF53X2sQ==", "post"=>{"hours"=>"16", "minutes"=>"46"}, "commit"=>"START WORKING"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "websites" ("hours", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["hours", 60], ["created_at", "2017-10-16 21:46:14.663036"], ["updated_at", "2017-10-16 21:46:14.663036"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.9
+Completed 302 Found in 43ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/website.9" for 127.0.0.1 at 2017-10-16 16:46:14 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.3ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 21ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Website with 'id'=):
+  
+app/controllers/websites_controller.rb:7:in `show'
+Started GET "/website.9" for 127.0.0.1 at 2017-10-16 16:51:02 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (7.0ms)
+  Rendered websites/show.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 436ms (Views: 341.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-16 16:51:12 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IjbrKkyypL/+R3DTAIzGvBb4WnDw/bYDZWanu8WiPeDPjpMiElMmtNVaPrbSkz7Y3kJ7rbSzkA/P/5TF53X2sQ==", "post"=>{"hours"=>"16", "minutes"=>"46"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("hours", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["hours", 60], ["created_at", "2017-10-16 21:51:12.627330"], ["updated_at", "2017-10-16 21:51:12.627330"]]
+  [1m[35m (177.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.10
+Completed 302 Found in 181ms (ActiveRecord: 178.0ms)
+
+
+Started GET "/website.10" for 127.0.0.1 at 2017-10-16 16:51:12 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 64ms (Views: 49.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 16:51:59 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.5ms)
+  Rendered websites/setup.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-16 16:52:02 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"twknGxpLwdnF8oDmaj5D3EvRWe4a9aJJBD/qTvV35AdasV8TRKpD0u7vzoO4Ibu4g2t4M167hEWuptkw16AvVg==", "post"=>{"hours"=>"16", "minutes"=>"51"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("hours", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["hours", 60], ["created_at", "2017-10-16 21:52:02.298705"], ["updated_at", "2017-10-16 21:52:02.298705"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.11
+Completed 302 Found in 3ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/website.11" for 127.0.0.1 at 2017-10-16 16:52:02 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 61ms (Views: 47.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-16 17:57:15 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"twknGxpLwdnF8oDmaj5D3EvRWe4a9aJJBD/qTvV35AdasV8TRKpD0u7vzoO4Ibu4g2t4M167hEWuptkw16AvVg==", "post"=>{"hours"=>"16", "minutes"=>"51"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("hours", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["hours", 60], ["created_at", "2017-10-16 22:57:15.304955"], ["updated_at", "2017-10-16 22:57:15.304955"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.12
+Completed 302 Found in 33ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 17:57:15 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.5ms)
+  Rendered websites/show.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 914ms (Views: 898.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 17:59:30 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.1ms)
+  Rendered websites/show.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 412ms (Views: 388.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 18:01:13 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (2.0ms)
+  Rendered websites/show.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 337ms (Views: 313.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 18:06:07 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.7ms)
+  Rendered websites/show.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 786ms (Views: 761.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 18:06:24 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 288ms (Views: 274.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 18:10:28 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 129ms (Views: 116.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 18:15:59 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:53: syntax error, unexpected tIDENTIFIER, expecting ')'
+...a new timer" website_setup_path );@output_buffer.safe_append...
+...                               ^):
+  
+app/views/websites/show.html.erb:53: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 18:16:18 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (216.3ms)
+Completed 500 Internal Server Error in 272ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `website_setup_path' for #<#<Class:0x007ff28b9da2a8>:0x007ff289aec238>
+Did you mean?  website_path):
+    50: 
+    51:     <div id="goAway" class="hide">
+    52:         <h4>Time's Up!</h4>
+    53:         <%= link_to "Setup a new timer", website_setup_path %>
+    54:     </div>
+    55: </div>
+    56: 
+  
+app/views/websites/show.html.erb:53:in `_app_views_websites_show_html_erb___960303450630504542_70339834375380'
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 18:16:39 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/show.html.erb within layouts/application (259.3ms)
+Completed 500 Internal Server Error in 326ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `websites_setup_path' for #<#<Class:0x007ff28b9da2a8>:0x007ff289b46968>
+Did you mean?  website_path):
+    50: 
+    51:     <div id="goAway" class="hide">
+    52:         <h4>Time's Up!</h4>
+    53:         <%= link_to "Setup a new timer", websites_setup_path %>
+    54:     </div>
+    55: </div>
+    56: 
+  
+app/views/websites/show.html.erb:53:in `_app_views_websites_show_html_erb___960303450630504542_70339834560380'
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 18:16:57 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (315.7ms)
+Completed 500 Internal Server Error in 355ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:54: syntax error, unexpected '<', expecting ')'
+    </div>
+     ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:55: unknown regexp options - dv
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:57: syntax error, unexpected '<'
+<audio id="bell" preload="auto...
+ ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:57: syntax error, unexpected tIDENTIFIER, expecting ')'
+<audio id="bell" preload="auto" src="/39475571_bell-r...
+                        ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:57: syntax error, unexpected tIDENTIFIER, expecting ')'
+...io id="bell" preload="auto" src="/39475571_bell-ringing-01.w...
+...                               ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:57: syntax error, unexpected '<'
+...39475571_bell-ringing-01.wav"></audio>
+...                               ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:58: unknown regexp options - Adc
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:58: syntax error, unexpected tIDENTIFIER, expecting ')'
+...="auto" src="/Audience_Applause-Matthiew11-1206899159.wav"><...
+...                               ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:58: syntax error, unexpected tSTRING_BEG, expecting ')'
+...ause-Matthiew11-1206899159.wav"></audio>
+...                               ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting ')'
+<!-- <div id="results"></div>
+                     ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:62: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+    $.ajax(url: "/website/setup").done (html) ->
+                                ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:64: syntax error, unexpected '<', expecting ')'
+</script> -->'.freeze;
+ ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:64: unterminated regexp meets end of file):
+  
+app/views/websites/show.html.erb:54: syntax error, unexpected '<', expecting ')'
+app/views/websites/show.html.erb:55: unknown regexp options - dv
+app/views/websites/show.html.erb:57: syntax error, unexpected '<'
+app/views/websites/show.html.erb:57: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/websites/show.html.erb:57: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/websites/show.html.erb:57: syntax error, unexpected '<'
+app/views/websites/show.html.erb:58: unknown regexp options - Adc
+app/views/websites/show.html.erb:58: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/websites/show.html.erb:58: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/websites/show.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/websites/show.html.erb:62: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/websites/show.html.erb:64: syntax error, unexpected '<', expecting ')'
+app/views/websites/show.html.erb:64: unterminated regexp meets end of file
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 18:17:05 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (208.6ms)
+Completed 500 Internal Server Error in 237ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `websites_setup' for #<#<Class:0x007ff28b9da2a8>:0x007ff284d16630>
+Did you mean?  website_url):
+    50: 
+    51:     <div id="goAway" class="hide">
+    52:         <h4>Time's Up!</h4>
+    53:         <%= link_to "Setup a new timer", websites_setup %>
+    54:     </div>
+    55: </div>
+    56: 
+  
+app/views/websites/show.html.erb:53:in `_app_views_websites_show_html_erb___960303450630504542_70339793567620'
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 18:17:12 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (194.5ms)
+Completed 500 Internal Server Error in 222ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `root' for #<#<Class:0x007ff28b9da2a8>:0x007ff289c9ecc0>):
+    50: 
+    51:     <div id="goAway" class="hide">
+    52:         <h4>Time's Up!</h4>
+    53:         <%= link_to "Setup a new timer", root %>
+    54:     </div>
+    55: </div>
+    56: 
+  
+app/views/websites/show.html.erb:53:in `_app_views_websites_show_html_erb___960303450630504542_70339835273400'
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 18:17:24 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.1ms)
+
+
+  
+SyntaxError (/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:54: unknown regexp options - dv
+unmatched close parenthesis: / );@output_buffer.safe_append='
+    </i
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:55: syntax error, unexpected '<'
+</div>
+ ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:57: trailing `_' in number
+... preload="auto" src="/39475571_bell-ringing-01.wav"></audio>
+...                               ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:57: syntax error, unexpected tINTEGER, expecting ')'
+... preload="auto" src="/39475571_bell-ringing-01.wav"></audio>
+...                               ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:57: syntax error, unexpected tSTRING_BEG, expecting ')'
+..."/39475571_bell-ringing-01.wav"></audio>
+...                               ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:58: syntax error, unexpected tIDENTIFIER, expecting ')'
+<audio id="applause" preload="auto" src="/Audien...
+                   ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:58: syntax error, unexpected tIDENTIFIER, expecting ')'
+...dio id="applause" preload="auto" src="/Audience_Applause-Mat...
+...                               ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:58: syntax error, unexpected tSTRING_BEG, expecting ')'
+...ause-Matthiew11-1206899159.wav"></audio>
+...                               ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting ')'
+<!-- <div id="results"></div>
+                     ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:62: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+    $.ajax(url: "/website/setup").done (html) ->
+                                ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:64: syntax error, unexpected '<', expecting ')'
+</script> -->'.freeze;
+ ^
+/Users/MrandMrsFore/odin/Pomodoro/app/views/websites/show.html.erb:64: unterminated regexp meets end of file):
+  
+app/views/websites/show.html.erb:54: unknown regexp options - dv
+app/views/websites/show.html.erb:55: syntax error, unexpected '<'
+app/views/websites/show.html.erb:57: trailing `_' in number
+app/views/websites/show.html.erb:57: syntax error, unexpected tINTEGER, expecting ')'
+app/views/websites/show.html.erb:57: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/websites/show.html.erb:58: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/websites/show.html.erb:58: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/websites/show.html.erb:58: syntax error, unexpected tSTRING_BEG, expecting ')'
+app/views/websites/show.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/websites/show.html.erb:62: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+app/views/websites/show.html.erb:64: syntax error, unexpected '<', expecting ')'
+app/views/websites/show.html.erb:64: unterminated regexp meets end of file
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 18:17:44 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 893ms (Views: 880.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 18:19:29 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 63ms (Views: 52.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 18:19:54 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.3ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 113ms (Views: 98.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 18:20:12 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 187ms (Views: 174.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 18:20:13 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.3ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 64ms (Views: 50.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/website.12" for 127.0.0.1 at 2017-10-16 18:20:55 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 209ms (Views: 196.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 18:21:03 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/setup.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 65ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-16 18:21:05 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QOiCHy6suhzzCYBo6hdf64N5V8Cmhz7osrPIawOobGrHKYqLUJn+SLINVp2zg2tT7zHdJfX5NZLeYN8qjXeUKA==", "post"=>{"hours"=>"18", "minutes"=>"21"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "websites" ("hours", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["hours", 60], ["created_at", "2017-10-16 23:21:05.825570"], ["updated_at", "2017-10-16 23:21:05.825570"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.13
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/website.13" for 127.0.0.1 at 2017-10-16 18:21:05 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 66ms (Views: 51.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.13" for 127.0.0.1 at 2017-10-16 18:22:05 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 179ms (Views: 167.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 18:23:45 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/setup.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 471ms (Views: 459.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-16 18:23:49 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V0YE9eHTkjir4UR43DX+k5wyjwizIoDGIl6mfkHY3na6/nz9vzIQM4D8Ch0OKgb3VIiu1fdspsqIx5UAYw8VJw==", "post"=>{"hours"=>"18", "minutes"=>"23"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("hours", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["hours", 60], ["created_at", "2017-10-16 23:23:49.005490"], ["updated_at", "2017-10-16 23:23:49.005490"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.14
+Completed 302 Found in 3ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/website.14" for 127.0.0.1 at 2017-10-16 18:23:49 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 78ms (Views: 49.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.14" for 127.0.0.1 at 2017-10-16 18:24:03 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.1ms)
+  Rendered websites/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 61ms (Views: 46.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-16 18:24:26 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V0YE9eHTkjir4UR43DX+k5wyjwizIoDGIl6mfkHY3na6/nz9vzIQM4D8Ch0OKgb3VIiu1fdspsqIx5UAYw8VJw==", "post"=>{"hours"=>"18", "minutes"=>"23"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "websites" ("hours", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["hours", 60], ["created_at", "2017-10-16 23:24:26.073280"], ["updated_at", "2017-10-16 23:24:26.073280"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.15
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/website.15" for 127.0.0.1 at 2017-10-16 18:24:26 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 152ms (Views: 136.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.15" for 127.0.0.1 at 2017-10-16 18:24:29 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 59ms (Views: 46.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.15" for 127.0.0.1 at 2017-10-16 18:26:12 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 477ms (Views: 452.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.15" for 127.0.0.1 at 2017-10-16 18:27:41 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 212ms (Views: 200.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.15" for 127.0.0.1 at 2017-10-16 18:28:44 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 166ms (Views: 152.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 18:28:58 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.3ms)
+  Rendered websites/setup.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 45ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
