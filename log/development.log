@@ -10694,3 +10694,1775 @@ Processing by WebsitesController#setup as HTML
 Completed 200 OK in 45ms (Views: 26.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-17 13:40:07 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.2ms)
+  Rendered websites/setup.html.erb within layouts/application (120.0ms)
+Completed 200 OK in 1385ms (Views: 1366.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:40:10 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1H1+LP7Q5vxItImUIEJpZM89jhWD85jQhpGtsm80kJI5xQYkoDFk92Opx/HyXZEAB4evyMe9vtwsCJ7MTeNbww==", "post"=>{"hours"=>"13", "minutes"=>"40"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 0.6ms)
+
+
+  
+NameError (undefined local variable or method `current_time' for #<WebsitesController:0x007f88775721d0>
+Did you mean?  @current_time):
+  
+app/controllers/websites_controller.rb:18:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:40:29 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1H1+LP7Q5vxItImUIEJpZM89jhWD85jQhpGtsm80kJI5xQYkoDFk92Opx/HyXZEAB4evyMe9vtwsCJ7MTeNbww==", "post"=>{"hours"=>"13", "minutes"=>"40"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 0.9ms)
+
+
+  
+NameError (undefined local variable or method `current_time' for #<WebsitesController:0x007f887e2e1b08>
+Did you mean?  @current_time):
+  
+app/controllers/websites_controller.rb:18:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:40:47 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1H1+LP7Q5vxItImUIEJpZM89jhWD85jQhpGtsm80kJI5xQYkoDFk92Opx/HyXZEAB4evyMe9vtwsCJ7MTeNbww==", "post"=>{"hours"=>"13", "minutes"=>"40"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `minutes' for 2017-10-17 13:40:47 -0500:Time):
+  
+app/controllers/websites_controller.rb:18:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:41:30 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1H1+LP7Q5vxItImUIEJpZM89jhWD85jQhpGtsm80kJI5xQYkoDFk92Opx/HyXZEAB4evyMe9vtwsCJ7MTeNbww==", "post"=>{"hours"=>"13", "minutes"=>"40"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `minutes' for 2017-10-17 13:41:30 -0500:Time):
+  
+app/controllers/websites_controller.rb:18:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:42:10 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1H1+LP7Q5vxItImUIEJpZM89jhWD85jQhpGtsm80kJI5xQYkoDFk92Opx/HyXZEAB4evyMe9vtwsCJ7MTeNbww==", "post"=>{"hours"=>"13", "minutes"=>"40"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `minutes_tell_finish=' for #<Website:0x007f88765168b8>
+Did you mean?  minutes_will_change!):
+  
+app/controllers/websites_controller.rb:23:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:42:46 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1H1+LP7Q5vxItImUIEJpZM89jhWD85jQhpGtsm80kJI5xQYkoDFk92Opx/HyXZEAB4evyMe9vtwsCJ7MTeNbww==", "post"=>{"hours"=>"13", "minutes"=>"40"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "websites" ("hours", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["hours", 60], ["created_at", "2017-10-17 18:42:46.352181"], ["updated_at", "2017-10-17 18:42:46.352181"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.16
+Completed 302 Found in 12ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/website.16" for 127.0.0.1 at 2017-10-17 13:42:46 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.3ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (21.7ms)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `minutes_tell_finish' for #<Website:0x007f887cceadb8>
+Did you mean?  minutes_will_change!):
+    1: 
+    2: <script>
+    3:     const workTimer = new Timer(<%= @website.minutes_tell_finish %> , "/Audience_Applause-Matthiew11-1206899159.wav");
+    4:     const breakTimer = new Timer(<%=  %>1, "/Audience_Applause-Matthiew11-1206899159.wav");
+    5: </script>
+    6: 
+  
+app/views/websites/show.html.erb:3:in `_app_views_websites_show_html_erb___1843095928724939829_70112109347160'
+Started GET "/website.16" for 127.0.0.1 at 2017-10-17 13:43:10 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.1ms)
+  Rendered websites/show.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 95ms (Views: 83.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.16" for 127.0.0.1 at 2017-10-17 13:43:24 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (21.0ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `minutes_tell_finish' for #<Website:0x007f887786c2a0>
+Did you mean?  minutes_will_change!):
+    1: 
+    2: <script>
+    3:     const workTimer = new Timer(<%= @website.minutes_tell_finish %> , "/Audience_Applause-Matthiew11-1206899159.wav");
+    4:     const breakTimer = new Timer(<%=  %>1, "/Audience_Applause-Matthiew11-1206899159.wav");
+    5: </script>
+    6: 
+  
+app/views/websites/show.html.erb:3:in `_app_views_websites_show_html_erb___1843095928724939829_70112033599320'
+Started GET "/website.16" for 127.0.0.1 at 2017-10-17 13:44:13 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (21.7ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `minutes_tell_finish' for #<Website:0x007f88774b0418>
+Did you mean?  minutes_will_change!):
+    1: 
+    2: <script>
+    3:     const workTimer = new Timer(<%= @website.minutes_tell_finish %> , "/Audience_Applause-Matthiew11-1206899159.wav");
+    4:     const breakTimer = new Timer(<%=  %>1, "/Audience_Applause-Matthiew11-1206899159.wav");
+    5: </script>
+    6: 
+  
+app/views/websites/show.html.erb:3:in `_app_views_websites_show_html_erb___1843095928724939829_70112046816560'
+Started GET "/" for 127.0.0.1 at 2017-10-17 13:44:23 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/setup.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:44:31 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y3ghBYxO9/IHjQQvfTiAlbaM8oUO8gspbfZEVWJZKY8mwFkN0q91+SyQSkqvJ3jxfjbTWEq8LSXHb3crQI7i3g==", "post"=>{"hours"=>"13", "minutes"=>"45"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("hours", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["hours", -44], ["created_at", "2017-10-17 18:44:31.282087"], ["updated_at", "2017-10-17 18:44:31.282087"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.17
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/website.17" for 127.0.0.1 at 2017-10-17 13:44:31 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 50ms (Views: 36.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:44:58 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y3ghBYxO9/IHjQQvfTiAlbaM8oUO8gspbfZEVWJZKY8mwFkN0q91+SyQSkqvJ3jxfjbTWEq8LSXHb3crQI7i3g==", "post"=>{"hours"=>"13", "minutes"=>"45"}, "commit"=>"START WORKING"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("hours", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["hours", 44], ["created_at", "2017-10-17 18:44:58.088610"], ["updated_at", "2017-10-17 18:44:58.088610"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.18
+Completed 302 Found in 11ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/website.18" for 127.0.0.1 at 2017-10-17 13:44:58 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 50ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:45:15 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y3ghBYxO9/IHjQQvfTiAlbaM8oUO8gspbfZEVWJZKY8mwFkN0q91+SyQSkqvJ3jxfjbTWEq8LSXHb3crQI7i3g==", "post"=>{"hours"=>"13", "minutes"=>"55"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("hours", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["hours", 45], ["created_at", "2017-10-17 18:45:15.535565"], ["updated_at", "2017-10-17 18:45:15.535565"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.19
+Completed 302 Found in 3ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/website.19" for 127.0.0.1 at 2017-10-17 13:45:15 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 47ms (Views: 36.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-17 13:46:15 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/setup.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 71ms (Views: 69.1ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:46:16 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wqiP+YY/bLxZG/Ip1E31m/rMYEIpj+qlIr/grFuQeFQvEPfx2N7ut3IGvEwGUg3/MnZBn23BzKmIJtPSeUezBQ==", "post"=>{"hours"=>"13", "minutes"=>"46"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.7ms)
+
+
+  
+TypeError (String can't be coerced into Fixnum):
+  
+app/controllers/websites_controller.rb:23:in `-'
+app/controllers/websites_controller.rb:23:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:46:49 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wqiP+YY/bLxZG/Ip1E31m/rMYEIpj+qlIr/grFuQeFQvEPfx2N7ut3IGvEwGUg3/MnZBn23BzKmIJtPSeUezBQ==", "post"=>{"hours"=>"13", "minutes"=>"46"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("hours", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["hours", 0], ["created_at", "2017-10-17 18:46:49.985803"], ["updated_at", "2017-10-17 18:46:49.985803"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.20
+Completed 302 Found in 11ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/website.20" for 127.0.0.1 at 2017-10-17 13:46:49 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 50ms (Views: 38.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-17 13:46:56 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/setup.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:47:01 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uTd6pc1LNpsBKFKoTf5DrMMXYekXBA1aaeJxToIFVcdUjwKtk6q0kCo1HM2f4bvIC61ANFNKK1bDe0IwoNKelg==", "post"=>{"hours"=>"13", "minutes"=>"56"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("hours", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["hours", -9], ["created_at", "2017-10-17 18:47:01.838147"], ["updated_at", "2017-10-17 18:47:01.838147"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.21
+Completed 302 Found in 3ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/website.21" for 127.0.0.1 at 2017-10-17 13:47:01 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 58ms (Views: 46.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:47:57 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uTd6pc1LNpsBKFKoTf5DrMMXYekXBA1aaeJxToIFVcdUjwKtk6q0kCo1HM2f4bvIC61ANFNKK1bDe0IwoNKelg==", "post"=>{"hours"=>"13", "minutes"=>"56"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "websites" ("minutes", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["minutes", 9], ["created_at", "2017-10-17 18:47:57.288605"], ["updated_at", "2017-10-17 18:47:57.288605"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.22
+Completed 302 Found in 12ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/website.22" for 127.0.0.1 at 2017-10-17 13:47:57 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.1ms)
+  Rendered websites/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 54ms (Views: 41.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:50:19 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uTd6pc1LNpsBKFKoTf5DrMMXYekXBA1aaeJxToIFVcdUjwKtk6q0kCo1HM2f4bvIC61ANFNKK1bDe0IwoNKelg==", "post"=>{"hours"=>"13", "minutes"=>"56"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "websites" ("minutes", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["minutes", 6], ["created_at", "2017-10-17 18:50:19.731353"], ["updated_at", "2017-10-17 18:50:19.731353"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.23
+Completed 302 Found in 15ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/website.23" for 127.0.0.1 at 2017-10-17 13:50:19 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.5ms)
+  Rendered websites/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 59ms (Views: 47.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:50:34 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uTd6pc1LNpsBKFKoTf5DrMMXYekXBA1aaeJxToIFVcdUjwKtk6q0kCo1HM2f4bvIC61ANFNKK1bDe0IwoNKelg==", "post"=>{"hours"=>"13", "minutes"=>"58"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("minutes", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["minutes", 8], ["created_at", "2017-10-17 18:50:34.202745"], ["updated_at", "2017-10-17 18:50:34.202745"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.24
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/website.24" for 127.0.0.1 at 2017-10-17 13:50:34 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.1ms)
+  Rendered websites/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 56ms (Views: 44.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:52:02 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uTd6pc1LNpsBKFKoTf5DrMMXYekXBA1aaeJxToIFVcdUjwKtk6q0kCo1HM2f4bvIC61ANFNKK1bDe0IwoNKelg==", "post"=>{"hours"=>"13", "minutes"=>"59"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("minutes", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["minutes", 7], ["created_at", "2017-10-17 18:52:02.975496"], ["updated_at", "2017-10-17 18:52:02.975496"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.25
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/website.25" for 127.0.0.1 at 2017-10-17 13:52:03 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 53ms (Views: 41.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.15" for 127.0.0.1 at 2017-10-17 13:52:36 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 53ms (Views: 38.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:52:44 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uTd6pc1LNpsBKFKoTf5DrMMXYekXBA1aaeJxToIFVcdUjwKtk6q0kCo1HM2f4bvIC61ANFNKK1bDe0IwoNKelg==", "post"=>{"hours"=>"15", "minutes"=>"46"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("minutes", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["minutes", 114], ["created_at", "2017-10-17 18:52:44.971234"], ["updated_at", "2017-10-17 18:52:44.971234"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.26
+Completed 302 Found in 3ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/website.26" for 127.0.0.1 at 2017-10-17 13:52:45 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 49ms (Views: 37.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.26" for 127.0.0.1 at 2017-10-17 13:54:17 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 57ms (Views: 38.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-17 13:54:31 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/setup.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 13:54:32 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p/G8IOz7xjJVzO5h4bfLXBQ20AiaBlWVqp9x6LDfBdVKScQoshpEOX7RoAQzqDM43Izx1d5Ic5kABkKWkgjOhA==", "post"=>{"hours"=>"13", "minutes"=>"54"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `seconds=' for #<Website:0x007f887c8e9b10>):
+  
+app/controllers/websites_controller.rb:21:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-17 14:13:47 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/setup.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 239ms (Views: 237.5ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 14:13:51 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U4VdUCIVk0tepZzO7efEJMlqVTfgeq+YTcBKh6Zafey+PSVYfPQRQHW40qs/+DxAAdB06qQ0iZTnWXn5hI22vQ==", "post"=>{"hours"=>"14", "minutes"=>"15"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "websites" ("minutes", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["minutes", 2], ["created_at", "2017-10-17 19:13:51.864952"], ["updated_at", "2017-10-17 19:13:51.864952"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.27
+Completed 302 Found in 13ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/website.27" for 127.0.0.1 at 2017-10-17 14:13:51 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/show.html.erb within layouts/application (15.4ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `seconds' for #<Website:0x007f887fabae78>
+Did you mean?  send):
+    1: 
+    2: <script>
+    3:     const workTimer = new Timer(<%= @website.seconds %> , "/Audience_Applause-Matthiew11-1206899159.wav", <%= @website.minutes %>);
+    4:     const breakTimer = new Timer(<%=  %>5, "/Audience_Applause-Matthiew11-1206899159.wav");
+    5: </script>
+    6: 
+  
+app/views/websites/show.html.erb:3:in `_app_views_websites_show_html_erb___1843095928724939829_70112117115420'
+Started GET "/" for 127.0.0.1 at 2017-10-17 14:14:03 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.6ms)
+  Rendered websites/setup.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 14:14:07 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Sf82pU+uZNKL0cVGsZeQC9DAWzwTXZ5/QKwq/pGajbekR06tEU/m2aDMiyNjiGhvGHp64VcTuHPqNRmAs01G5g==", "post"=>{"hours"=>"14", "minutes"=>"18"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("minutes", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["minutes", 4], ["created_at", "2017-10-17 19:14:07.202081"], ["updated_at", "2017-10-17 19:14:07.202081"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.28
+Completed 302 Found in 4ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/website.28" for 127.0.0.1 at 2017-10-17 14:14:07 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.1ms)
+  Rendered websites/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 50ms (Views: 38.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 14:15:37 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Sf82pU+uZNKL0cVGsZeQC9DAWzwTXZ5/QKwq/pGajbekR06tEU/m2aDMiyNjiGhvGHp64VcTuHPqNRmAs01G5g==", "post"=>{"hours"=>"14", "minutes"=>"10"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("minutes", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["minutes", -5], ["created_at", "2017-10-17 19:15:37.021137"], ["updated_at", "2017-10-17 19:15:37.021137"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.29
+Completed 302 Found in 4ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/website.29" for 127.0.0.1 at 2017-10-17 14:15:37 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 168ms (Views: 157.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 14:17:22 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Sf82pU+uZNKL0cVGsZeQC9DAWzwTXZ5/QKwq/pGajbekR06tEU/m2aDMiyNjiGhvGHp64VcTuHPqNRmAs01G5g==", "post"=>{"hours"=>"14", "minutes"=>"15"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("minutes", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["minutes", -2], ["created_at", "2017-10-17 19:17:22.222461"], ["updated_at", "2017-10-17 19:17:22.222461"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.30
+Completed 302 Found in 3ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/website.30" for 127.0.0.1 at 2017-10-17 14:17:22 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 137ms (Views: 126.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-17 14:17:40 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/setup.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 111ms (Views: 109.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-17 14:17:43 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/setup.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 14:17:51 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4L9gbLpl8QRIYMbVn223ZXYu3cBSLmRCG5LZ5zGMan4NBxhk5IRzD2N9iLBNck8BvpT8HRZgQk6xC+qZE1uhLw==", "post"=>{"hours"=>"14", "minutes"=>"20"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("minutes", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["minutes", 3], ["created_at", "2017-10-17 19:17:51.840348"], ["updated_at", "2017-10-17 19:17:51.840348"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.31
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/website.31" for 127.0.0.1 at 2017-10-17 14:17:51 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 52ms (Views: 40.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-17 14:19:09 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/setup.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 89ms (Views: 88.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 14:19:13 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ljiRRRiMsX5nnvmoRclYTQTpOKA3FKIuj5lO+mOC2917gOlNRm0zdUyDt82X1qApzFMZfXNahCIlAH2EQVUQjA==", "post"=>{"hours"=>"14", "minutes"=>"22"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("minutes", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["minutes", 3], ["created_at", "2017-10-17 19:19:13.356868"], ["updated_at", "2017-10-17 19:19:13.356868"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.32
+Completed 302 Found in 3ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/website.32" for 127.0.0.1 at 2017-10-17 14:19:13 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 49ms (Views: 37.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-17 14:21:13 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/setup.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 14:21:17 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vo3wbnpC7O0LjdSTr6mryRigeJHWem9AjqbhpLr96wi7NYhmJKNu5iCQmvZ9tlOt0BpZTJI0SUwkP9LamCogWQ==", "post"=>{"hours"=>"14", "minutes"=>"24"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "websites" ("minutes", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["minutes", 3], ["created_at", "2017-10-17 19:21:17.071696"], ["updated_at", "2017-10-17 19:21:17.071696"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.33
+Completed 302 Found in 3ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/website.33" for 127.0.0.1 at 2017-10-17 14:21:17 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 52ms (Views: 39.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-17 14:24:14 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/setup.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 80ms (Views: 78.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 14:24:19 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HC+/WJIaos1YkcdDIrn5sULuNp3uiq46kO0+2l1UezHxl8dQzPsgxnOMiSbwpgHVilQXQKrEiDY6dA2kf4OwYA==", "post"=>{"hours"=>"14", "minutes"=>"30"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("minutes", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["minutes", 6], ["created_at", "2017-10-17 19:24:19.551336"], ["updated_at", "2017-10-17 19:24:19.551336"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.34
+Completed 302 Found in 3ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/website.34" for 127.0.0.1 at 2017-10-17 14:24:19 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 50ms (Views: 38.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-17 16:21:09 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (46.0ms)
+  Rendered websites/setup.html.erb within layouts/application (81.4ms)
+Completed 200 OK in 2164ms (Views: 2022.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 16:21:23 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KskwM0LE03STKMQxGS1ekuP4+veT0IcEZx/jPSFwFYvHcUg7HCVRf7g1ilTLMqb2K0LbKteeoQjNhtBDA6fe2g==", "post"=>{"hours"=>"16", "minutes"=>"41"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("minutes", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["minutes", 20], ["created_at", "2017-10-17 21:21:23.977916"], ["updated_at", "2017-10-17 21:21:23.977916"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.35
+Completed 302 Found in 59ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/website.35" for 127.0.0.1 at 2017-10-17 16:21:23 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.3ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 293ms (Views: 243.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-17 16:48:05 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/setup.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 397ms (Views: 385.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 16:48:22 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3+MZt872iM1xQgFdL+o0FoPmB5xblFElr/m8ej+DgGUyW2G/kBcKxlpfTzj99cxyS1wmQR/adykFYI8EHVRLNA==", "post"=>{"hours"=>"17", "minutes"=>"48"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `[]' for false:FalseClass):
+  
+app/controllers/websites_controller.rb:22:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-17 16:49:19 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/setup.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 31ms (Views: 28.5ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 16:49:22 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GWYA/8sEEbI0aATLPBtq6+H1qG1Ep0bzsYRrMWg17R303nj3leWTuR91Sq7uBJKPKU+JsADpYP8bHVhPSuImTA==", "post"=>{"hours"=>"17", "minutes"=>"49"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `[]' for false:FalseClass):
+  
+app/controllers/websites_controller.rb:22:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-17 16:50:06 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/setup.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 24ms (Views: 22.9ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 16:50:11 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E5YvnERCpNJBaAJXBUvlSQ/24p0zJq4WSEf0wr6e0Nf+LleUGqMm2Wp1TDLXVB0tx0zDQHdoiBri3se8nEkbhg==", "post"=>{"hours"=>"17", "minutes"=>"50"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `[]' for false:FalseClass):
+  
+app/controllers/websites_controller.rb:22:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-17 16:50:27 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.9ms)
+  Rendered websites/setup.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 34ms (Views: 31.5ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 16:50:30 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DKPgJGb1dMuP0SWonzWXTNuD6nWdaS5Uz3R3o61N/CDhG5gsOBT2wKTMa81NKm8oEznLqNknCFhl7UTdj5o3cQ==", "post"=>{"hours"=>"17", "minutes"=>"50"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `session' for #<Website:0x007f888003c9c8>):
+  
+app/controllers/websites_controller.rb:22:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-17 16:52:12 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/setup.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 24ms (Views: 22.7ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 16:52:16 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+BlSUHk6HZGeKEFiPJ2ObaSUdnwa4jCMur/aEKFGDvOWB1BHwVqfW1l72Ba7Y5dfihwBLQlrs6Yc8wWYFLTag==", "post"=>{"hours"=>"17", "minutes"=>"52"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `session' for #<Website:0x007f887c8a37f0>):
+  
+app/controllers/websites_controller.rb:26:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-17 16:53:13 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/setup.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 24ms (Views: 22.2ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 16:53:19 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gIUc42IPjjXMl27mGb4LKA+eYib96ileaShL09+7mOxtPWTrPO4MPueKIIPLofNMxyRD+7mkD1LDsXit/WxTvQ==", "post"=>{"hours"=>"17", "minutes"=>"53"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.9ms)
+
+
+  
+TypeError (nil can't be coerced into Fixnum):
+  
+app/controllers/websites_controller.rb:26:in `/'
+app/controllers/websites_controller.rb:26:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-17 16:53:55 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.1ms)
+  Rendered websites/setup.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 27ms (Views: 25.7ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 16:53:58 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QxNQqx/rZuL3Dm6Tw4zaKWBWRFk8lux7pLllnOSt96euqyijQQrk6dwTIPYRkyJNqOxlhHjYyncOIFbixno89g==", "post"=>{"hours"=>"17", "minutes"=>"53"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.5ms)
+
+
+  
+NoMethodError (undefined method `session=' for #<Website:0x007f8881082eb8>):
+  
+app/controllers/websites_controller.rb:29:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-17 16:54:31 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/setup.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 23ms (Views: 21.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 16:54:35 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"roq9LyWNIaeYytR7qeJ0zZPKNSmat5jrxGqEDYNLAuVDMsUne2yjrLPXmh57/YypW3AU9N75vudu87dzoZzJtA==", "post"=>{"hours"=>"17", "minutes"=>"54"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `sessions=' for #<Website:0x007f887ee78ca0>):
+  
+app/controllers/websites_controller.rb:29:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-10-17 16:55:39 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.7ms)
+  Rendered websites/setup.html.erb within layouts/application (44.5ms)
+Completed 200 OK in 2945ms (Views: 2935.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 16:55:46 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Taf29JNiOJO5gvdXg6PAooSDG4DTktBK4cVFBdb9dfGgH478zYO6mJKfuTJRvDjGTDk6XZfc9kZLXHZ79Cq+oA==", "post"=>{"hours"=>"17", "minutes"=>"55"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `sessions=' for #<Website:0x007fd9855fd7d0>):
+  
+app/controllers/websites_controller.rb:29:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-17 16:58:27 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.2ms)
+  Rendered websites/setup.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 33ms (Views: 31.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-17 16:58:38 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/setup.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 27ms (Views: 24.3ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 16:58:42 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p80rP8756tIIyDR6fvcSZJHEU89dFld4rmBA6CL/rEBKdVM3kBho2SPVeh+s6OoAWX5yEhlYcXQE+XOWAChnEQ==", "post"=>{"hours"=>"17", "minutes"=>"58"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `sessions=' for #<Website:0x007fd985d957e0>):
+  
+app/controllers/websites_controller.rb:29:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-17 17:00:23 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.3ms)
+  Rendered websites/setup.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 26ms (Views: 24.2ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 17:00:27 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Waw/na9G+r3bU/wC60PiG5Yut3iF0FTSNrOQX/BZ1Re0FEeV8ad4tvBOsmc5XBp/XpSWpcGect6cKqMh0o4eRg==", "post"=>{"hours"=>"18", "minutes"=>"00"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `sessions=' for #<Website:0x007fd985d55140>):
+  
+app/controllers/websites_controller.rb:29:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-10-17 17:04:01 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.2ms)
+  Rendered websites/setup.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 192ms (Views: 182.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 17:04:04 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W3fuat1sfL+60i/ssgcqwX6OFC4sgFwZ+SGIz1OA3oC2z5Zig43+tJHPYYlgGNKltjQ182jOehVTuLuxcVcV0Q==", "post"=>{"hours"=>"18", "minutes"=>"04"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `work_seconds=' for #<Website:0x007fff35ad8c48>):
+  
+app/controllers/websites_controller.rb:30:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-17 17:06:48 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W3fuat1sfL+60i/ssgcqwX6OFC4sgFwZ+SGIz1OA3oC2z5Zig43+tJHPYYlgGNKltjQ182jOehVTuLuxcVcV0Q==", "post"=>{"hours"=>"18", "minutes"=>"04"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `sessions=' for #<Website:0x007fff2e34fed8>):
+  
+app/controllers/websites_controller.rb:27:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-10-17 17:07:45 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.4ms)
+  Rendered websites/setup.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 198ms (Views: 190.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 17:07:48 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0FQGm9FhawppcVaSW2UDIDttekM3Szm7xh0dcfk7U3497H6Tj4DpAUJsGPeJevtE89dbnnMFH7dshC4P2+yYLw==", "post"=>{"hours"=>"18", "minutes"=>"07"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `sessions=' for #<Website:0x007fda37928bc8>):
+  
+app/controllers/websites_controller.rb:27:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-17 17:08:50 -0500
+Started POST "/website" for 127.0.0.1 at 2017-10-17 17:09:00 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0FQGm9FhawppcVaSW2UDIDttekM3Szm7xh0dcfk7U3497H6Tj4DpAUJsGPeJevtE89dbnnMFH7dshC4P2+yYLw==", "post"=>{"hours"=>"18", "minutes"=>"07"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `sessions' for #<Website:0x007fda3129d8e0>):
+  
+app/controllers/websites_controller.rb:12:in `create'
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0FQGm9FhawppcVaSW2UDIDttekM3Szm7xh0dcfk7U3497H6Tj4DpAUJsGPeJevtE89dbnnMFH7dshC4P2+yYLw==", "post"=>{"hours"=>"18", "minutes"=>"07"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `sessions' for #<Website:0x007fda388b3a48>):
+  
+app/controllers/websites_controller.rb:12:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-17 17:09:41 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0FQGm9FhawppcVaSW2UDIDttekM3Szm7xh0dcfk7U3497H6Tj4DpAUJsGPeJevtE89dbnnMFH7dshC4P2+yYLw==", "post"=>{"hours"=>"18", "minutes"=>"07"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `sessions=' for #<Website:0x007fda369ac988>):
+  
+app/controllers/websites_controller.rb:28:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-17 17:11:03 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0FQGm9FhawppcVaSW2UDIDttekM3Szm7xh0dcfk7U3497H6Tj4DpAUJsGPeJevtE89dbnnMFH7dshC4P2+yYLw==", "post"=>{"hours"=>"18", "minutes"=>"07"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `sessions=' for #<Website:0x007fda2fda3f98>):
+  
+app/controllers/websites_controller.rb:28:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateWebsites (20170928214516)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "websites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "work_seconds" integer, "break_seconds" integer, "sessions" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170928214516"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-17 22:12:32.838370"], ["updated_at", "2017-10-17 22:12:32.838370"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/website" for 127.0.0.1 at 2017-10-17 17:12:54 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0FQGm9FhawppcVaSW2UDIDttekM3Szm7xh0dcfk7U3497H6Tj4DpAUJsGPeJevtE89dbnnMFH7dshC4P2+yYLw==", "post"=>{"hours"=>"18", "minutes"=>"07"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "websites" ("work_seconds", "break_seconds", "sessions", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["work_seconds", 1500], ["break_seconds", 300], ["sessions", 2], ["created_at", "2017-10-17 22:12:54.926629"], ["updated_at", "2017-10-17 22:12:54.926629"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.1
+Completed 302 Found in 23ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/website.1" for 127.0.0.1 at 2017-10-17 17:12:54 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.3ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.5ms)
+  Rendered websites/show.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 224ms (Views: 200.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-17 17:14:23 -0500
+Processing by WebsitesController#setup as HTML
+  Rendering websites/setup.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/setup.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 17:14:29 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OzWrI6OvAOyGK1BwsgmsvU0kKGeoEt5jMZ/5jcj3d+HWjdMr/U6C5602HhVgFlTZhZ4Juuxc+G+bBsrz6iC8sA==", "post"=>{"hours"=>"18", "minutes"=>"14"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("work_seconds", "break_seconds", "sessions", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["work_seconds", 1500], ["break_seconds", 300], ["sessions", 3], ["created_at", "2017-10-17 22:14:29.136893"], ["updated_at", "2017-10-17 22:14:29.136893"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.2
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/website.2" for 127.0.0.1 at 2017-10-17 17:14:29 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 59ms (Views: 46.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 17:18:41 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OzWrI6OvAOyGK1BwsgmsvU0kKGeoEt5jMZ/5jcj3d+HWjdMr/U6C5602HhVgFlTZhZ4Juuxc+G+bBsrz6iC8sA==", "post"=>{"hours"=>"20", "minutes"=>"14"}, "commit"=>"START WORKING"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `*' for nil:NilClass):
+  
+app/controllers/websites_controller.rb:25:in `create'
+Started POST "/website" for 127.0.0.1 at 2017-10-17 17:19:31 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OzWrI6OvAOyGK1BwsgmsvU0kKGeoEt5jMZ/5jcj3d+HWjdMr/U6C5602HhVgFlTZhZ4Juuxc+G+bBsrz6iC8sA==", "post"=>{"hours"=>"20", "minutes"=>"14"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "websites" ("work_seconds", "break_seconds", "sessions", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["work_seconds", 1560], ["break_seconds", 360], ["sessions", 5], ["created_at", "2017-10-17 22:19:31.193005"], ["updated_at", "2017-10-17 22:19:31.193005"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.3
+Completed 302 Found in 14ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/website.3" for 127.0.0.1 at 2017-10-17 17:19:31 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.2ms)
+  Rendered websites/show.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 60ms (Views: 46.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.3" for 127.0.0.1 at 2017-10-17 17:19:56 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 83ms (Views: 51.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 17:20:09 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OzWrI6OvAOyGK1BwsgmsvU0kKGeoEt5jMZ/5jcj3d+HWjdMr/U6C5602HhVgFlTZhZ4Juuxc+G+bBsrz6iC8sA==", "post"=>{"hours"=>"20", "minutes"=>"14"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "websites" ("work_seconds", "break_seconds", "sessions", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["work_seconds", 60], ["break_seconds", 60], ["sessions", 5], ["created_at", "2017-10-17 22:20:09.091301"], ["updated_at", "2017-10-17 22:20:09.091301"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.4
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/website.4" for 127.0.0.1 at 2017-10-17 17:20:09 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 61ms (Views: 48.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.4" for 127.0.0.1 at 2017-10-17 17:22:28 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 115ms (Views: 101.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.4" for 127.0.0.1 at 2017-10-17 17:25:38 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 119ms (Views: 105.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 17:28:49 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OzWrI6OvAOyGK1BwsgmsvU0kKGeoEt5jMZ/5jcj3d+HWjdMr/U6C5602HhVgFlTZhZ4Juuxc+G+bBsrz6iC8sA==", "post"=>{"hours"=>"21", "minutes"=>"14"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "websites" ("work_seconds", "break_seconds", "sessions", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["work_seconds", 5], ["break_seconds", 0], ["sessions", 7], ["created_at", "2017-10-17 22:28:49.978263"], ["updated_at", "2017-10-17 22:28:49.978263"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.5
+Completed 302 Found in 15ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/website.5" for 127.0.0.1 at 2017-10-17 17:28:49 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.1ms)
+  Rendered websites/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 105ms (Views: 92.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.5" for 127.0.0.1 at 2017-10-17 17:30:41 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 75ms (Views: 61.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.5" for 127.0.0.1 at 2017-10-17 17:31:29 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 91ms (Views: 78.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.5" for 127.0.0.1 at 2017-10-17 17:32:31 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 63ms (Views: 50.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.5" for 127.0.0.1 at 2017-10-17 17:34:30 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 75ms (Views: 62.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.5" for 127.0.0.1 at 2017-10-17 17:35:00 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 94ms (Views: 79.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 17:35:23 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OzWrI6OvAOyGK1BwsgmsvU0kKGeoEt5jMZ/5jcj3d+HWjdMr/U6C5602HhVgFlTZhZ4Juuxc+G+bBsrz6iC8sA==", "post"=>{"hours"=>"21", "minutes"=>"14"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "websites" ("work_seconds", "break_seconds", "sessions", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["work_seconds", 5], ["break_seconds", 7], ["sessions", 7], ["created_at", "2017-10-17 22:35:23.997403"], ["updated_at", "2017-10-17 22:35:23.997403"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.6
+Completed 302 Found in 20ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 17:35:24 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 60ms (Views: 47.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 17:38:13 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 57ms (Views: 43.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 17:38:31 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 66ms (Views: 51.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 17:39:13 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 56ms (Views: 44.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 17:40:55 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 75ms (Views: 62.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 17:48:12 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 77ms (Views: 64.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 17:58:44 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 76ms (Views: 62.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 17:59:44 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 97ms (Views: 84.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:06:01 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 97ms (Views: 85.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:09:46 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 98ms (Views: 86.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:11:08 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 111ms (Views: 99.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:12:03 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 87ms (Views: 74.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:12:59 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 87ms (Views: 74.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:13:08 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.2ms)
+  Rendered websites/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 65ms (Views: 47.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:13:56 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.7ms)
+  Rendered websites/show.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 91ms (Views: 76.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:15:29 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.5ms)
+  Rendered websites/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 95ms (Views: 79.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:18:18 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.2ms)
+  Rendered websites/show.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 94ms (Views: 79.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:18:56 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.1ms)
+  Rendered websites/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 91ms (Views: 78.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:20:23 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 80ms (Views: 68.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:21:12 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 75ms (Views: 63.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:21:55 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 55ms (Views: 41.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:23:04 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 76ms (Views: 64.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:23:51 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 81ms (Views: 69.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:25:44 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.5ms)
+  Rendered websites/show.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 78ms (Views: 62.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:26:07 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 101ms (Views: 88.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:26:45 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 78ms (Views: 66.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:27:29 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.2ms)
+  Rendered websites/show.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 295ms (Views: 256.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:27:38 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 67ms (Views: 54.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:31:14 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/show.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 325ms (Views: 310.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:32:04 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 76ms (Views: 64.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:32:20 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 60ms (Views: 47.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:32:53 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 82ms (Views: 64.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:36:06 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 76ms (Views: 62.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:36:55 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 80ms (Views: 68.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:39:00 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 72ms (Views: 59.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:39:25 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 61ms (Views: 48.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:39:50 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 77ms (Views: 64.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:42:06 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 288ms (Views: 255.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:43:12 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (7.3ms)
+  Rendered websites/show.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 91ms (Views: 76.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:43:43 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 79ms (Views: 65.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:44:47 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 61ms (Views: 48.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:45:20 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.0ms)
+  Rendered websites/show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 78ms (Views: 64.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.6" for 127.0.0.1 at 2017-10-17 18:46:43 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 305ms (Views: 271.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/website" for 127.0.0.1 at 2017-10-17 18:47:54 -0500
+Processing by WebsitesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OzWrI6OvAOyGK1BwsgmsvU0kKGeoEt5jMZ/5jcj3d+HWjdMr/U6C5602HhVgFlTZhZ4Juuxc+G+bBsrz6iC8sA==", "post"=>{"hours"=>"21", "minutes"=>"14"}, "commit"=>"START WORKING"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "websites" ("work_seconds", "break_seconds", "sessions", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["work_seconds", 5], ["break_seconds", 7], ["sessions", 5], ["created_at", "2017-10-17 23:47:54.192340"], ["updated_at", "2017-10-17 23:47:54.192340"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/website.7
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 18:47:54 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 51ms (Views: 39.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 18:48:23 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 77ms (Views: 64.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 18:49:02 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 80ms (Views: 68.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 18:50:56 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 65ms (Views: 47.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 18:52:34 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 61ms (Views: 48.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 18:54:26 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 61ms (Views: 47.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 18:58:40 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 252ms (Views: 240.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 18:58:59 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 77ms (Views: 65.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 19:01:03 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 262ms (Views: 241.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 19:01:31 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 199ms (Views: 187.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 19:03:23 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.1ms)
+  Rendered websites/show.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 92ms (Views: 76.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 19:04:08 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 76ms (Views: 64.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 19:06:30 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 103ms (Views: 91.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 19:08:07 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.1ms)
+  Rendered websites/show.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 82ms (Views: 68.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 19:08:23 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 84ms (Views: 71.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 19:08:50 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.3ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 74ms (Views: 62.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 19:09:23 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.2ms)
+  Rendered websites/show.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 66ms (Views: 50.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 19:09:40 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 59ms (Views: 39.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 19:11:14 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.2ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.7ms)
+  Rendered websites/show.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 235ms (Views: 221.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 19:14:32 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.9ms)
+  Rendered websites/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 92ms (Views: 79.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 19:15:10 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (1.1ms)
+  Rendered websites/show.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 72ms (Views: 57.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/website.7" for 127.0.0.1 at 2017-10-17 19:27:32 -0500
+Processing by WebsitesController#show as 
+  [1m[36mWebsite Load (0.1ms)[0m  [1m[34mSELECT  "websites".* FROM "websites" WHERE "websites"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering websites/show.html.erb within layouts/application
+  Rendered websites/_form.html.erb (0.8ms)
+  Rendered websites/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 252ms (Views: 233.7ms | ActiveRecord: 0.1ms)
+
+

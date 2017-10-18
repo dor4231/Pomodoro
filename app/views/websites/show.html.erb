@@ -1,7 +1,8 @@
 
 <script>
-    const workTimer = new Timer(<%= @website.hours %> , "/Audience_Applause-Matthiew11-1206899159.wav");
-    const breakTimer = new Timer(<%=  %>1, "/Audience_Applause-Matthiew11-1206899159.wav");
+    const workTimer = new Timer(<%= @website.work_seconds %> , <%= @website.sessions %>, "/Audience_Applause-Matthiew11-1206899159.wav");
+    const breakTimer = new Timer(<%= @website.break_seconds %> , <%= @website.sessions %>,  "/Audience_Applause-Matthiew11-1206899159.wav");
+    // workTimer.start_timer();
 </script>
 
 <div id="container">
@@ -36,7 +37,7 @@
                 <div id="pom-time">00:00</div>
                 <div id="pom-controls">
                     <ul>
-                        <li><i onclick="workTimer.start_timer()" class="fa fa-play-circle fa-3x" aria-hidden="true"></i></li>
+                        <li><button id="play" class="work" onclick="workTimer.start_timer()">Play</button></li>
                         <li><button id="reset" class="work" onclick="workTimer.reset_timer()">Reset</button></li>
                     </ul>
                 </div>

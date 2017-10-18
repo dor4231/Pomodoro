@@ -1,32 +1,30 @@
 class Timer {
-    constructor(seconds, sound_path, sessions) {
+    constructor(seconds, sessions=null, sound_path) {
+        self = this
         this.user_seconds = parseInt(seconds);
         this.seconds = parseInt(seconds);
         this.clear = true;
         this.audio = new Audio(sound_path);
-        this.sessions = sessions
+        this.sessions = sessions;
+        this.running = false;
+        this.interval = null;
     }
-    
 
     // The interval that tuns the timer.
     countdown() {
-        var self = this;
-        var running_timer = setInterval(function() {
             self.print_junk();
             $("#pom-time").html(self.time_string());
             if(self.sessions <= 0){
-                times_up()
+                self.times_up();
+                clearInterval(self.interval);
             }else if(self.seconds <= 0) {
-                clearInterval(running_timer);
                 self.make_a_sound();
                 self.work_break_toggle();
-            }else if(self.clear) {
-                clearInterval(running_timer);
+                console.log(self);
+                clearInterval(self.interval);
             }
             else 
                 self.seconds -= 1;
-        }
-            ,1000);
     }
     
     // Convert the seconds into a clock form. 
@@ -77,7 +75,8 @@ class Timer {
             
             this.seconds = this.user_seconds;
             this.clear = true;
-            this.sessions -= 1
+            this.sessions -= 1;
+            console.log(this.sessions);
             $("#play").trigger("click");
         } else {
             $("#pom-top").replaceWith('<div id="pom-top" class="work"><h1>Work Time Remaining</h1></div>');
@@ -86,8 +85,7 @@ class Timer {
             
             this.seconds = this.user_seconds;
             this.clear = true;
-            this.sessions -= 1
-            $("#play").trigger("click");
+            // $("#play").trigger("click");
         };
     }
 
@@ -104,15 +102,14 @@ class Timer {
 
     // The buttons functions.
     start_timer() {
-        if(this.clear == true) {
-            console.log("clear == true");
-            this.pause = false;
-            this.clear = false;
-            this.countdown();
+        if(this.running == true) {
+            console.log(this.running);
+            clearInterval(this.interval);
+            this.running = false;
         } else {
-            console.log("clear == false");
-            this.pause = false;
-            this.clear = true;
+            console.log(this.running);
+            this.interval = setInterval(this.countdown ,1000);
+            this.running = true;
         }
 
         if($("#play").html() == "Play")
