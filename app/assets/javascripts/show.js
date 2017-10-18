@@ -1,6 +1,6 @@
 class Timer {
-    constructor(seconds, sessions=null, sound_path) {
-        self = this
+    constructor(seconds, sound_path, sessions=null) {
+        // self = this
         this.user_seconds = parseInt(seconds);
         this.seconds = parseInt(seconds);
         this.clear = true;
@@ -11,20 +11,19 @@ class Timer {
     }
 
     // The interval that tuns the timer.
-    countdown() {
-            self.print_junk();
-            $("#pom-time").html(self.time_string());
-            if(self.sessions <= 0){
-                self.times_up();
-                clearInterval(self.interval);
-            }else if(self.seconds <= 0) {
-                self.make_a_sound();
-                self.work_break_toggle();
-                console.log(self);
-                clearInterval(self.interval);
+    static countdown(timer) {
+            $("#pom-time").html(timer.time_string());
+            if(timer.sessions == 0){
+                timer.times_up();
+                clearInterval(timer.interval);
+            }else if(timer.seconds <= 0) {
+                clearInterval(timer.interval);
+                timer.running = false;
+                timer.make_a_sound();
+                timer.work_break_toggle();
             }
             else 
-                self.seconds -= 1;
+                timer.seconds -= 1;
     }
     
     // Convert the seconds into a clock form. 
@@ -44,7 +43,7 @@ class Timer {
     }
 
     // Sets new secons into the timer object.
-    set_seconds(new_seconds) {
+     new_seconds() {
         this.seconds = new_seconds;
     }
 
@@ -61,7 +60,6 @@ class Timer {
         console.log("Alex & Dor are the BEST!")
     }
 
-    // ##### Need to be implemented #####
     // Supose to change the view of the page from Work to Brake and vis versa.
     work_break_toggle() {
         // Check if we finished "work" or a "break"
@@ -76,7 +74,6 @@ class Timer {
             this.seconds = this.user_seconds;
             this.clear = true;
             this.sessions -= 1;
-            console.log(this.sessions);
             $("#play").trigger("click");
         } else {
             $("#pom-top").replaceWith('<div id="pom-top" class="work"><h1>Work Time Remaining</h1></div>');
@@ -85,7 +82,7 @@ class Timer {
             
             this.seconds = this.user_seconds;
             this.clear = true;
-            // $("#play").trigger("click");
+            $("#play").trigger("click");
         };
     }
 
@@ -102,20 +99,16 @@ class Timer {
 
     // The buttons functions.
     start_timer() {
+        self = this;
         if(this.running == true) {
-            console.log(this.running);
             clearInterval(this.interval);
             this.running = false;
-        } else {
-            console.log(this.running);
-            this.interval = setInterval(this.countdown ,1000);
-            this.running = true;
-        }
-
-        if($("#play").html() == "Play")
-            $("#play").html("Pause");
-        else 
             $("#play").html("Play");
+        } else {
+            this.interval = setInterval(function() {Timer.countdown(self)} ,1000);
+            this.running = true;
+            $("#play").html("Pause");
+        }           
     }
 
     pause_timer() {

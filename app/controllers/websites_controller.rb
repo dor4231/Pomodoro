@@ -9,7 +9,6 @@ class WebsitesController < ApplicationController
 
     def create
         @website = Website.new
-        p @website
         variables = params[:post]
 
         # Calculates work duration in minutes
@@ -26,8 +25,8 @@ class WebsitesController < ApplicationController
 
         # Set the data into the Website object and save it to the FB
         @website.sessions = data[:work]
-        @website.work_seconds = 5 #(remaining_time + 0) * 60
-        @website.break_seconds = 7#(remaining_time + 0) * 60
+        @website.work_seconds = (remaining_time + 25) * 60
+        @website.break_seconds = (remaining_time + 5) * 60
         @website.save
         
         redirect_to website_path(@website)
