@@ -21,7 +21,7 @@ class WebsitesController < ApplicationController
         # Breaking the time into sessions
         data = session_breaker(total_time)
         p data 
-        remaining_time = (data[:remaining]/ (data[:work]*2)-1)
+        remaining_time = (data[:remaining] / (data[:work]*2)-1)
 
         # Set the data into the Website object and save it to the FB
         @website.sessions = data[:work]
